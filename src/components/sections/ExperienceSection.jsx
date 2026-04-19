@@ -9,7 +9,7 @@ export default function ExperienceSection({ timeline, philosophy, skills }) {
         <div className="mx-auto max-w-7xl">
           <div className="mb-8">
             <div className="mb-3 font-mono text-xs text-slate-600">
-              // SUPPORTING_SKILLS
+              {/* SUPPORTING_SKILLS  */}
             </div>
             <h2 className="text-2xl font-bold text-slate-300">
               Also Proficient In
