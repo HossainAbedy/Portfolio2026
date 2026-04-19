@@ -8,6 +8,7 @@ portfolio2026/
 │  │  ├─ common/
 │  │  │  ├─ DividerLine.jsx
 │  │  │  ├─ GlassCard.jsx
+│  │  │  ├─ Metrics.jsx
 │  │  │  ├─ SectionTitle.jsx
 │  │  │  └─ TagChip.jsx
 │  │  ├─ layout/
