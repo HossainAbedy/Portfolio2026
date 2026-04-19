@@ -1,0 +1,38 @@
+portfolio2026/
+├─ public/
+│  └─ index.html
+├─ src/
+│  ├─ assets/
+│  │  └─ images/
+│  ├─ components/
+│  │  ├─ common/
+│  │  │  ├─ DividerLine.jsx
+│  │  │  ├─ GlassCard.jsx
+│  │  │  ├─ SectionTitle.jsx
+│  │  │  └─ TagChip.jsx
+│  │  ├─ layout/
+│  │  │  ├─ Footer.jsx
+│  │  │  └─ Navbar.jsx
+│  │  ├─ cards/
+│  │  │  ├─ CapabilityCard.jsx
+│  │  │  ├─ CaseStudyCard.jsx
+│  │  │  ├─ ProjectCard.jsx
+│  │  │  └─ TimelineItem.jsx
+│  │  └─ sections/
+│  │     ├─ CapabilitiesSection.jsx
+│  │     ├─ CaseStudiesSection.jsx
+│  │     ├─ ContactSection.jsx
+│  │     ├─ ExperienceSection.jsx
+│  │     ├─ Hero.jsx
+│  │     └─ ProjectsSection.jsx
+│  ├─ data/
+│  │  └─ portfolioData.js
+│  ├─ styles/
+│  │  └─ global.css
+│  ├─ App.js
+│  └─ index.js
+├─ tailwind.config.js
+├─ postcss.config.js
+├─ package.json
+├─ .gitignore
+└─ README.md
