@@ -35,7 +35,7 @@ export default function ExperienceSection({ timeline, philosophy, skills }) {
       <section className="section-pad px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
-            eyebrow="// METHODOLOGY"
+            eyebrow=" METHODOLOGY"
             title="Security Philosophy"
             desc="Core principles that guide threat analysis, vulnerability research, and security architecture decisions."
           />
@@ -47,7 +47,7 @@ export default function ExperienceSection({ timeline, philosophy, skills }) {
               >
                 <div
                   className={`absolute left-0 top-0 h-1 w-full bg-gradient-to-r ${
-                    ["from-cyan-300", "from-emerald-300", "from-violet-300", "from-amber-300"][index]
+                    ["from-red-300", "from-cyan-300", "from-emerald-300", "from-amber-300"][index]
                   } to-transparent`}
                 />
                 <div className="mb-3 font-mono text-xs text-slate-600">

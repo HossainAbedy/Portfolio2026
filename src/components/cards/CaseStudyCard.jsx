@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import TagChip from "../common/TagChip";
 
-export default function CaseStudyCard({ study, index = 0 }) {
+export default function CaseStudyCard({ study, index = 0, onClick }) {
   const metricClass =
     study.accent === "violet"
       ? "text-violet-300"
@@ -10,6 +10,14 @@ export default function CaseStudyCard({ study, index = 0 }) {
       ? "text-emerald-300"
       : study.accent === "amber"
       ? "text-amber-300"
+      : study.accent === "blue"
+      ? "text-sky-300"
+      : study.accent === "indigo"
+      ? "text-indigo-300"
+      : study.accent === "orange"
+      ? "text-orange-300"
+      : study.accent === "red"
+      ? "text-red-300"
       : "text-cyan-300";
 
   const bgClass =
@@ -19,7 +27,17 @@ export default function CaseStudyCard({ study, index = 0 }) {
       ? "from-emerald-950"
       : study.accent === "amber"
       ? "from-amber-950"
+      : study.accent === "blue"
+      ? "from-sky-950"
+      : study.accent === "indigo"
+      ? "from-indigo-950"
+      : study.accent === "orange"
+      ? "from-orange-950"
+      : study.accent === "red"
+      ? "from-red-950"
       : "from-cyan-950";
+
+  const bullets = study.bullets || [];
 
   return (
     <motion.div
@@ -41,13 +59,18 @@ export default function CaseStudyCard({ study, index = 0 }) {
         <div className={`text-2xl font-bold ${metricClass}`}>{study.metric}</div>
       </div>
 
-      <div className="mb-4 space-y-2 text-xs text-slate-500">
-        {study.bullets.map((b) => (
-          <p key={b}>• {b}</p>
-        ))}
-      </div>
+      {bullets.length > 0 && (
+        <div className="mb-4 space-y-2 text-xs text-slate-500">
+          {bullets.slice(0, 3).map((b) => (
+            <p key={b}>• {b}</p>
+          ))}
+        </div>
+      )}
 
-      <button className={`font-mono text-xs font-semibold ${metricClass}`}>
+      <button
+        onClick={() => onClick?.(study)}
+        className={`font-mono text-xs font-semibold ${metricClass}`}
+      >
         Read Full Study →
       </button>
     </motion.div>

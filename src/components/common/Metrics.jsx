@@ -4,45 +4,53 @@ import Modal from "./Modal";
 
 const metrics = [
   {
-    value: "500+",
-    label: "Endpoints Monitored",
-    detail: "Real-time visibility using SIEM, Wazuh, and automation.",
+    value: "1500+",
+    label: "Managed Endpoints",
+    detail:
+      "Centralized visibility across endpoints using Wazuh SIEM, FortiAnalyzer, and custom-built inventory and risk analysis platforms.",
     extra: [
-      "Collected OS, patch status, AV, BitLocker, firewall",
-      "Parallel WMI scanning with runspace pools",
-      "Enterprise-wide risk visibility",
+      "Collected OS, patch level, AV status, BitLocker, firewall, and domain posture",
+      "Deep scan engine enabled granular endpoint intelligence collection",
+      "Enabled enterprise-wide asset visibility and audit readiness",
+      "Mapped endpoint risk posture aligned with MITRE-based evaluation",
     ],
   },
   {
-    value: "20+",
-    label: "Branches Supported",
-    detail: "Security operations across distributed banking environments.",
+    value: "125+",
+    label: "Branches / Sites Supported",
+    detail:
+      "Operational and security support across distributed banking infrastructure including endpoints, firewalls, and branch systems.",
     extra: [
-      "Network + firewall + endpoint security",
-      "Bangladesh Bank compliance alignment",
-      "Audit + remediation workflows",
+      "Worked with FortiGate 600E / 1100E for branch-level security",
+      "Handled connectivity, access control, and network issue triage",
+      "Supported audit preparation and compliance checks",
+      "Provided remediation guidance aligned with Bangladesh Bank standards",
     ],
   },
   {
-    value: "15+",
-    label: "Automations Built",
-    detail: "Scripts and tools to reduce manual security workload.",
+    value: "30+",
+    label: "Automation & Internal Tools",
+    detail:
+      "Developed automation pipelines and internal platforms to reduce manual workload and improve operational efficiency.",
     extra: [
-      "PowerShell (AD + system automation)",
-      "Python parsing + reporting pipelines",
-      "Significant time reduction in ops",
+      "Built PC Inventory system with deep scan, risk scoring, and PDF audit reporting",
+      "Attendance system with scheduler, thread pool, and data consistency controls",
+      "DVR management tool with NTP sync and bulk configuration via API",
+      "PowerShell automation for AD migration, system setup, and branch rollout",
     ],
   },
   {
-    value: "100+",
-    label: "Events Investigated",
-    detail: "Analyzed alerts to detect threats and anomalies.",
+    value: "60%↓",
+    label: "Alert Noise Reduction",
+    detail:
+      "Improved detection quality by tuning SIEM rules, correlation logic, and filtering noisy alerts across multiple security platforms.",
     extra: [
-      "Wazuh, Elastic, FortiAnalyzer",
-      "False-positive tuning",
-      "Improved detection accuracy",
+      "Worked across Wazuh, Elastic Stack, and FortiAnalyzer",
+      "Reduced false positives through rule tuning and behavioral analysis",
+      "Improved signal-to-noise ratio for SOC operations",
+      "Enabled faster triage and better incident prioritization",
     ],
-  },
+  }
 ];
 
 export default function Metrics() {
@@ -51,10 +59,13 @@ export default function Metrics() {
   return (
     <section className="px-6 py-10 md:px-8">
       <div className="mx-auto max-w-7xl">
-        
-        <h2 className="mb-6 text-2xl font-semibold text-slate-200">
+        <h2 className="mb-2 text-2xl font-semibold text-slate-200">
           Impact Snapshot
         </h2>
+        <p className="mb-6 max-w-2xl text-sm text-slate-400">
+          A quick summary of the environments, tools, and operational work
+          behind the portfolio.
+        </p>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {metrics.map((item) => (
@@ -65,15 +76,13 @@ export default function Metrics() {
               onClick={() => setActive(item)}
               className="group cursor-pointer rounded-xl border border-white/10 bg-gradient-to-br from-[#0f172a] to-[#020617] p-5 transition hover:border-cyan-300/40 hover:shadow-[0_0_20px_rgba(34,211,238,0.15)]"
             >
-              <p className="text-2xl font-bold text-cyan-300">
-                {item.value}
-              </p>
+              <p className="text-2xl font-bold text-cyan-300">{item.value}</p>
 
               <p className="mt-1 text-sm font-semibold text-white">
                 {item.label}
               </p>
 
-              <p className="mt-2 text-xs text-slate-400 line-clamp-2">
+              <p className="mt-2 text-xs text-slate-400">
                 {item.detail}
               </p>
 
@@ -84,7 +93,6 @@ export default function Metrics() {
           ))}
         </div>
 
-        {/* MODAL */}
         <AnimatePresence>
           {active && (
             <Modal isOpen={true} onClose={() => setActive(null)}>
@@ -105,7 +113,8 @@ export default function Metrics() {
                 <ul className="space-y-2 text-sm text-slate-400">
                   {active.extra.map((e, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="text-cyan-400">•</span> {e}
+                      <span className="text-cyan-400">•</span>
+                      <span>{e}</span>
                     </li>
                   ))}
                 </ul>
@@ -113,7 +122,6 @@ export default function Metrics() {
             </Modal>
           )}
         </AnimatePresence>
-
       </div>
     </section>
   );
