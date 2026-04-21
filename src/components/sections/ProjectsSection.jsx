@@ -8,10 +8,17 @@ import ImageCarousel from "../common/ImageCarousel";
 export default function ProjectsSection({ projects }) {
   const [active, setActive] = useState(null);
 
+  // ✅ normalize images safely (THIS FIXES YOUR CAROUSEL ISSUE)
+  const images =
+    active && Array.isArray(active.images)
+      ? active.images
+      : active?.image
+      ? [active.image]
+      : [];
+
   return (
     <section id="flagship" className="section-pad px-6 md:px-8">
       <div className="mx-auto max-w-7xl">
-
         <SectionTitle
           eyebrow="FLAGSHIP APPLICATIONS"
           title="Project Portfolio"
@@ -25,22 +32,21 @@ export default function ProjectsSection({ projects }) {
               key={project.title}
               project={project}
               index={index}
-              onClick={() => setActive(project)}  
+              onClick={() => setActive(project)}
             />
           ))}
         </div>
-
       </div>
 
       {/* MODAL */}
       <Modal isOpen={!!active} onClose={() => setActive(null)}>
         {active && (
-          <div className="space-y-5">
+          <div className="space-y-6">
 
-            {/* IMAGE CAROUSEL (SAFE GUARD) */}
-            {active.images?.length > 0 && (
+            {/* IMAGE CAROUSEL (NOW SAFE + ALWAYS WORKS IF DATA EXISTS) */}
+            {images.length > 0 && (
               <div className="overflow-hidden rounded-xl border border-white/10 bg-black/30">
-                <ImageCarousel images={active.images} />
+                <ImageCarousel images={images} />
               </div>
             )}
 
