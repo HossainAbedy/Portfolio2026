@@ -16,7 +16,10 @@ import {
   capabilities,
   skills,
   philosophy,
-  timeline,
+  experience,
+  education,
+  certifications,
+  publications,
 } from "./data/portfolioData";
 
 export default function App() {
@@ -36,9 +39,12 @@ export default function App() {
         <CapabilitiesSection capabilities={capabilities} />
 
         <ExperienceSection
-          timeline={timeline}
-          philosophy={philosophy}
           skills={skills}
+          philosophy={philosophy}
+          experience={experience}
+          education={education}
+          certifications={certifications}
+          publications={publications}
         />
 
         <DividerLine className="my-16" />
