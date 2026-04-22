@@ -67,7 +67,16 @@ export const projects = [
     tags: ["Flask", "Python", "ThreadPool", "MySQL"],
     accent: "violet",
     icon: BarChart3,
-    image: "/assets/images/attendance-dashboard.png",
+    images: [
+      "/assets/images/Projects/Att-System/Att-1.png",
+      "/assets/images/Projects/Att-System/Att-2.png",
+      "/assets/images/Projects/Att-System/Att-3.png",
+      "/assets/images/Projects/Att-System/Att-4.png",
+      "/assets/images/Projects/Att-System/Att-5.png",
+      "/assets/images/Projects/Att-System/Att-6.png",
+      "/assets/images/Projects/Att-System/Att-7.png",
+      "/assets/images/Projects/Att-System/Att-8.png",
+    ],
     summary:
       "Designed for reliable attendance collection, consistency control, and forwarding validated records to the HR application.",
     highlights: [
@@ -91,7 +100,10 @@ export const projects = [
     tags: ["PowerShell", "Hikvision API", "NTP", "Automation"],
     accent: "green",
     icon: Video,
-    image: "/assets/images/dvr-dashboard.png",
+    images: [
+      "/assets/images/Projects/DVR-System/DVR-1.png",
+      "/assets/images/Projects/DVR-System/DVR-2.png",
+    ],
     summary:
       "Built to keep DVR fleets healthy, synced, and centrally manageable from a frontend-driven control plane.",
     highlights: [
@@ -114,7 +126,13 @@ export const projects = [
     tags: ["Python", "Health Checks", "Operations", "Support"],
     accent: "blue",
     icon: Code2,
-    image: "/assets/images/safeops-dashboard.png",
+    images: [
+      "/assets/images/Projects/SafeOps/Safe-1.png",
+      "/assets/images/Projects/SafeOps/Safe-2.png",
+      "/assets/images/Projects/SafeOps/Safe-3.png",
+      "/assets/images/Projects/SafeOps/Safe-4.png",
+      "/assets/images/Projects/SafeOps/Safe-5.png",
+    ],
     summary:
       "Provides branch-wise scanning, health status display, remediation guidance, and SOP-aligned validation for endpoints.",
     highlights: [
@@ -137,7 +155,13 @@ export const projects = [
     tags: ["PowerShell", "AD", "Automation", "Enterprise"],
     accent: "indigo",
     icon: Server,
-    image: "/assets/images/ad-migration.png",
+    images: [
+      "/assets/images/Case Studies/AD/AD-1.png",
+      "/assets/images/Case Studies/AD/AD-2.png",
+      "/assets/images/Case Studies/AD/AD-3.png",
+      "/assets/images/Case Studies/AD/AD-4.png",
+      "/assets/images/Case Studies/AD/AD-5.png",
+    ],
     summary:
       "Migrated workgroup systems into domain-managed environments and automated post-installation setup across 125+ branches.",
     highlights: [
@@ -179,6 +203,72 @@ export const projects = [
 ];
 
 export const caseStudies = [
+  {
+    title: "Wazuh SIEM Tuning & CIS Benchmark Hardening",
+    tag: "DETECTION",
+    accent: "cyan",
+    metricLabel: "MEAN TIME TO DETECT",
+    metric: "45m → 8m",
+    images: [
+      "/assets/images/Case Studies/Wazuh/Wazuh-1.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-2.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-3.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-4.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-5.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-6.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-7.png",
+      "/assets/images/Case Studies/Wazuh/Wazuh-8.png",
+    ],
+    desc: "Improved detection quality through Wazuh rule tuning, alert optimization, and CIS benchmark hardening.",
+    bullets: [
+      "Analyzed and tuned high-volume alerts to reduce false positives",
+      "Optimized CIS benchmark findings for stronger endpoint hardening",
+      "Improved dashboard visibility for IT hygiene, alerts, and agent status",
+      "Strengthened SOC triage and response quality through cleaner signal",
+    ],
+  },
+  {
+    title: "FortiAnalyzer Monitoring & Log Correlation",
+    tag: "MONITORING",
+    accent: "violet",
+    metricLabel: "LOG VISIBILITY",
+    metric: "Centralized Analysis",
+    images: [
+      "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-1.png",
+      "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-2.png",
+      "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-3.png",
+      "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-4.png",
+      "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-5.png",
+    ],
+    desc: "Used FortiAnalyzer to review dashboards, threat activity, event monitors, and security logs for operational visibility.",
+    bullets: [
+      "Reviewed dashboards for centralized security visibility",
+      "Investigated threat events and event monitor outputs",
+      "Correlated logs to support triage and incident review",
+      "Improved understanding of firewall-to-SOC event flow",
+    ],
+  },
+  {
+    title: "FortiGate Policy, Interface & Traffic Review",
+    tag: "NETWORK",
+    accent: "green",
+    metricLabel: "PERIMETER CONTROL",
+    metric: "Policy & Traffic Review",
+    images: [
+      "/assets/images/Case Studies/FortiGate/FortiGate-1.png",
+      "/assets/images/Case Studies/FortiGate/FortiGate-2.png",
+      "/assets/images/Case Studies/FortiGate/FortiGate-3.png",
+      "/assets/images/Case Studies/FortiGate/FortiGate-4.png",
+      "/assets/images/Case Studies/FortiGate/FortiGate-5.png",
+    ],
+    desc: "Reviewed FortiGate interfaces, address objects, security policies, and forward traffic to support secure branch operations.",
+    bullets: [
+      "Checked interfaces and perimeter connectivity status",
+      "Reviewed address objects and security policy structure",
+      "Analyzed forward traffic for operational insight",
+      "Supported firewall hardening and branch network control",
+    ],
+  },
   {
     title: "PC Inventory Deep Scan & Audit Reporting",
     tag: "DETECTION",
@@ -246,7 +336,7 @@ export const caseStudies = [
     metricLabel: "HEALTH STATUS",
     metric: "Real-Time Visibility",
     image: "/assets/images/safeops-health.png",
-    desc: "Internal system for endpoint health monitoring, audit preparation, operational readiness checks and apply critical updates.",
+    desc: "Internal system for endpoint health monitoring, audit preparation, operational readiness checks and critical updates.",
     bullets: [
       "Branch-wise scanning for distributed infrastructure visibility",
       "Real-time health status display across endpoints",
@@ -260,7 +350,13 @@ export const caseStudies = [
     accent: "indigo",
     metricLabel: "DEPLOYMENT SCALE",
     metric: "125+ Branches",
-    image: "/assets/images/ad-migration-case.png",
+    images: [
+      "/assets/images/Case Studies/AD/AD-1.png",
+      "/assets/images/Case Studies/AD/AD-2.png",
+      "/assets/images/Case Studies/AD/AD-3.png",
+      "/assets/images/Case Studies/AD/AD-4.png",
+      "/assets/images/Case Studies/AD/AD-5.png",
+    ],
     desc: "Executed large-scale Active Directory migration with automated post-deployment configuration across distributed banking infrastructure.",
     bullets: [
       "Migrated endpoints from workgroup to domain across 125+ branches",
@@ -287,31 +383,38 @@ export const caseStudies = [
     ],
   },
   {
-    title: "SIEM Tuning & Detection Engineering",
-    tag: "DETECTION",
-    accent: "cyan",
-    metricLabel: "MEAN TIME TO DETECT",
-    metric: "45m → 8m",
-    image: "/assets/images/siem-tuning.png",
-    desc: "Reduced false positives through correlation tuning and MITRE ATT&CK alignment.",
+    title: "Security & Infrastructure Automation",
+    tag: "ENGINEERING",
+    accent: "indigo",
+    metricLabel: "DEPLOYMENT EFFICIENCY",
+    metric: "Hours → Minutes",
+    images: [
+      "/assets/images/Case Studies/Automation/Automation-1.png",
+      "/assets/images/Case Studies/Automation/Automation-2.png",
+      "/assets/images/Case Studies/Automation/Automation-3.png",
+      "/assets/images/Case Studies/Automation/Automation-4.png",
+    ],
+    desc: "Built reusable automation frameworks for infrastructure provisioning, endpoint standardization, and operational support.",
     bullets: [
-      "High-volume alert streams analyzed and optimized",
-      "Detection logic improved with structured rule tuning",
-      "SOC efficiency and response quality significantly improved",
+      "Automated post-domain configuration and user environment restoration",
+      "Standardized software deployment, licensing, and system baselines across 125+ branches",
+      "Developed reusable scripts for monitoring, reporting, and endpoint validation",
+      "Reduced deployment time and eliminated manual configuration inconsistencies",
     ],
   },
   {
-    title: "Security Automation Platform",
-    tag: "AUTOMATION",
+    title: "SOC Automation & Incident Response Acceleration",
+    tag: "DETECTION",
     accent: "green",
     metricLabel: "RESPONSE TIME",
-    metric: "-74%",
+    metric: "−74%",
     image: "/assets/images/security-automation.png",
-    desc: "Automated repetitive SOC workflows to reduce analyst workload and improve response speed.",
+    desc: "Designed automation workflows to accelerate security triage, alert enrichment, and incident response across SOC operations.",
     bullets: [
-      "Playbooks for phishing, malware, and brute-force scenarios",
-      "Automated enrichment and correlation of alerts",
-      "Improved consistency and reduced manual intervention",
+      "Built response playbooks for phishing, malware, and brute-force scenarios",
+      "Automated alert enrichment with contextual data for faster triage",
+      "Streamlined correlation between logs, alerts, and endpoint signals",
+      "Reduced analyst fatigue and improved consistency in incident handling",
     ],
   },
   {
@@ -321,7 +424,7 @@ export const caseStudies = [
     metricLabel: "AUDIT SUCCESS",
     metric: "100%",
     image: "/assets/images/branch-hardening.png",
-    desc: "Standardized security baselines and ensured compliance across distributed banking branches.",
+    desc: "Standardized security baselines and ensured compliance across distributed banking branches and continuous operations.",
     bullets: [
       "Group Policy-based baseline enforcement",
       "Automated audit reporting and remediation tracking",
@@ -349,7 +452,7 @@ export const caseStudies = [
     metricLabel: "POLICY ISSUES",
     metric: "Hundreds Identified",
     image: "/assets/images/network-audit.png",
-    desc: "Performed firewall and segmentation audits across enterprise environments & hardened configurations based on findings.",
+    desc: "Performed firewall and segmentation audits across enterprise environments and hardened configurations based on findings.",
     bullets: [
       "Firewall rule review and optimization",
       "Segmentation strategy improvements",
