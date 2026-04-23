@@ -5,8 +5,8 @@ import TagChip from "../common/TagChip";
 import Terminal from "../common/Terminal";
 
 export default function Hero({ site }) {
-  const scrollToCapabilities = () => {
-    const section = document.getElementById("capabilities");
+  const scrollToCaseStudies = () => {
+    const section = document.getElementById("cases");
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -21,7 +21,7 @@ export default function Hero({ site }) {
         >
           <div className="mb-4 flex items-center gap-2 font-mono text-[11px] text-slate-500">
             <span className="inline-block h-px w-4 bg-cyan-300" />
-            SECURITY · AUTOMATION · SYSTEMS · APPLICATIONS
+            SECURITY · AUTOMATION · SYSTEMS · APPLICATIONS · INFRA
           </div>
 
           <h1 className="mb-3 max-w-4xl bg-gradient-to-r from-cyan-300 via-violet-400 to-emerald-300 bg-clip-text text-4xl font-extrabold leading-tight text-transparent md:text-6xl">
@@ -38,18 +38,19 @@ export default function Hero({ site }) {
           </p>
 
           <div className="mb-5 flex flex-wrap gap-2">
-            <TagChip tone="cyan">SOC</TagChip>
-            <TagChip tone="violet">AppSec</TagChip>
-            <TagChip tone="amber">Automation</TagChip>
-            <TagChip tone="green">Network Security</TagChip>
+            <TagChip tone="red">SOC</TagChip>
+            <TagChip tone="cyan">AppSec</TagChip>
+            <TagChip tone="green">Automation</TagChip>
+            <TagChip tone="amber">Network Security</TagChip>
+            <TagChip tone="violet">Software Engineering</TagChip>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
             <button
-              onClick={scrollToCapabilities}
+              onClick={scrollToCaseStudies}
               className="rounded-lg bg-gradient-to-r from-cyan-300 to-emerald-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(0,240,255,0.28)]"
             >
-              View Capabilities
+              View Case Studies
             </button>
 
             <a
