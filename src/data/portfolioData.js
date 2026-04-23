@@ -582,7 +582,7 @@ export const philosophy = [
 
 export const experience = [
   {
-    logo: "/assets/images/logos/sbac-bank.png",
+    logo: "/assets/images/Logos/SBAC.png",
     title: "Assistant Officer",
     company: "SBAC Bank PLC.",
     type: "Full-time",
@@ -603,7 +603,7 @@ export const experience = [
     stack: ["Wazuh", "FortiAnalyzer", "FortiGate", "Kaspersky", "Active Directory"],
   },
   {
-    logo: "/assets/images/logos/sbac-bank.png",
+    logo: "/assets/images/Logos/SBAC.png",
     title: "Trainee Assistant Officer",
     company: "SBAC Bank PLC.",
     type: "Full-time",
@@ -618,7 +618,7 @@ export const experience = [
     stack: ["Security Operations", "Vulnerability Support", "Branch IT"],
   },
   {
-    logo: "/assets/images/logos/sigmind-ai.png",
+    logo: "/assets/images/Logos/SIGMIND.png",
     title: "Network Engineer",
     company: "SIGMIND.ai",
     type: "Contract",
@@ -633,7 +633,7 @@ export const experience = [
     stack: ["LAN/WAN", "ACLs", "Routing", "Vulnerability Assessment"],
   },
   {
-    logo: "/assets/images/logos/code-camp.png",
+    logo: "/assets/images/Logos/CODECAMP.png",
     title: "Coding Teacher",
     company: "Code Camp",
     type: "Contract",
@@ -648,7 +648,7 @@ export const experience = [
     stack: ["Teaching", "Communication", "Problem Solving"],
   },
   {
-    logo: "/assets/images/logos/telstra.png",
+    logo: "/assets/images/Logos/TELSTRA.png",
     title: "Customer Service Representative",
     company: "Telstra",
     type: "Full-time",
@@ -664,7 +664,7 @@ export const experience = [
     stack: ["Salesforce", "Customer Support", "Case Handling"],
   },
   {
-    logo: "/assets/images/logos/safara-it.png",
+    logo: "/assets/images/Logos/SAFARA.png",
     title: "Junior Programmer / Software Developer",
     company: "Safara IT (Concern of Edison Foundation)",
     type: "Full-time",
@@ -681,7 +681,7 @@ export const experience = [
     stack: ["Laravel", "Vue.js", "ERP", "Client Training"],
   },
   {
-    logo: "/assets/images/logos/safara-it.png",
+    logo: "/assets/images/Logos/SAFARA.png",
     title: "Software Engineer Intern",
     company: "Safara IT (Concern of Edison Foundation)",
     type: "Internship",
@@ -699,7 +699,7 @@ export const experience = [
 
 export const education = [
   {
-    logo: "/assets/images/logos/la-trobe.png",
+    logo: "/assets/images/Logos/LTU.png",
     school: "La Trobe University",
     degree: "Master's degree, Cybersecurity",
     period: "2020 – 2022",
@@ -711,7 +711,7 @@ export const education = [
     ],
   },
   {
-    logo: "/assets/images/logos/east-west.png",
+    logo: "/assets/images/Logos/EWU.png",
     school: "East West University",
     degree: "Bachelor of Science, Computer Science and Engineering",
     period: "2014 – 2018",
@@ -726,51 +726,95 @@ export const education = [
 
 export const certifications = [
   {
-    logo: "/assets/images/logos/eccouncil-wireshark.png",
-    name: "EC-Council’s Master Wireshark 3 in 5 Days",
+    logo: "/assets/images/Logos/COMPTIA.png",
+    name: "CompTIA Network+ (N10-007)",
+    issuer: "CompTIA",
+    issued: "Nov 2020",
+    expires: "Nov 2023",
+    credentialId: "",
+    accent: "cyan",
+
+    skills: [
+      // "Networking Fundamentals",
+      // "Routing & Switching",
+      // "Network Security",
+      // "Troubleshooting",
+    ],
+
+    // NEW
+    certificateImage: "/assets/images/Logos/NET.png",
+    certificateLink: "", // add Credly if available
+  },
+
+  {
+    logo: "/assets/images/Logos/COMPTIA.png",
+    name: "CompTIA Security+ (SY0-501)",
+    issuer: "CompTIA",
+    issued: "Feb 2021",
+    expires: "Feb 2024",
+    credentialId: "",
+    accent: "green",
+
+    skills: [
+      // "Threat Detection",
+      // "Risk Management",
+      // "Cryptography",
+      // "Security Operations",
+    ],
+
+    certificateImage: "/assets/images/Logos/SEC.png",
+    certificateLink: "", // add Credly link if you have
+  },
+
+  {
+    logo: "/assets/images/Logos/LTU.png",
+    name: "Cyber Technologies",
+    issuer: "La Trobe University (CSE)",
+    issued: "Oct 2022",
+    expires: "Lifetime",
+    credentialId: "",
+    accent: "blue",
+
+    skills: [
+      // "Cybersecurity Fundamentals",
+      // "Secure Systems",
+      // "Threat Analysis",
+    ],
+
+    certificateImage: "/assets/images/Logos/LTU.png",
+    certificateLink: "",
+  },
+
+  {
+    logo: "/assets/images/Logos/EC.png",
+    name: "Master Wireshark 3 in 5 Days",
     issuer: "EC-Council",
     issued: "Aug 2023",
     credentialId: "239074",
     accent: "indigo",
-    skills: ["Troubleshooting"],
-  },
-  {
-    logo: "/assets/images/logos/la-trobe.png",
-    name: "Cyber Technologies",
-    issuer: "La Trobe University",
-    issued: "Oct 2022",
-    credentialId: "",
-    accent: "blue",
-    skills: ["Routine Maintenance", "Computer Hardware"],
-  },
-  {
-    logo: "/assets/images/logos/comptia-securityplus.png",
-    name: "CompTIA Security+ ce Certification",
-    issuer: "CompTIA",
-    issued: "Feb 2021 · Expires Feb 2024",
-    credentialId: "",
-    accent: "green",
-    skills: ["Computer Science", "Network Security"],
-  },
-  {
-    logo: "/assets/images/logos/comptia-networkplus.png",
-    name: "CompTIA Network+ ce Certification",
-    issuer: "CompTIA",
-    issued: "Nov 2020 · Expires Nov 2023",
-    credentialId: "",
-    accent: "cyan",
-    skills: ["Computer Science", "Network Security"],
+
+    skills: [
+      // "Packet Analysis",
+      // "Network Troubleshooting",
+      // "Traffic Inspection",
+    ],
+
+    certificateImage: "/assets/images/Logos/EC.png",
+    certificateLink: "",
   },
 ];
 
 export const publications = [
   {
-    logo: "/assets/images/logos/ieee.png",
+    logo: "/assets/images/Logos/IEEE.png",
     title:
       "Leukemia Prediction from Microscopic Images of Human Blood Cell Using HOG Feature Descriptor and Logistic Regression",
-    venue: "2018 16th International Conference on ICT and Knowledge Engineering (ICT&KE)",
+    venue:
+      "2018 16th International Conference on ICT and Knowledge Engineering (ICT&KE)",
     publisher: "IEEE",
     issued: "Jan 17, 2019",
     accent: "red",
+    doi: "10.1109/ICTKE.2018.8612303",
+    link: "https://doi.org/10.1109/ICTKE.2018.8612303",
   },
 ];
