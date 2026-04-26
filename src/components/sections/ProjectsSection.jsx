@@ -11,7 +11,7 @@ export default function ProjectsSection({ projects }) {
     <section id="flagship" className="section-pad px-6 md:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
-          eyebrow="FLAGSHIP APPLICATIONS"
+          eyebrow="APPLICATIONS"
           title="Project Portfolio"
           desc="Full-stack security systems and automation platforms built for enterprise scale, delivering measurable impact across operations, risk, and compliance."
         />

@@ -6,6 +6,9 @@ portfolio2026/
 │  │  └─ images/
 │  ├─ components/
 │  │  ├─ common/
+│  │  │  ├─ modals
+│  │  │  │  ├─ ProjectDetailModal.jsx
+│  │  │  │  └─ CaseStudyDetailModal.jsx
 │  │  │  ├─ DividerLine.jsx
 │  │  │  ├─ GlassCard.jsx
 │  │  │  ├─ Metrics.jsx
@@ -28,7 +31,18 @@ portfolio2026/
 │  │     ├─ Hero.jsx
 │  │     └─ ProjectsSection.jsx
 │  ├─ data/
-│  │  └─ portfolioData.js
+│  │  ├─ portfolioData.js
+│  │  ├─ site.js
+│  │  ├─ projects.js
+│  │  ├─ caseStudies.js
+│  │  ├─ capabilities.js
+│  │  ├─ experience.js
+│  │  ├─ education.js
+│  │  ├─ certifications.js
+│  │  ├─ publications.js
+│  │  ├─ skills.js
+│  │  ├─ philosophy.js
+│  │  └─ index.js
 │  ├─ styles/
 │  │  └─ global.css
 │  ├─ App.js
