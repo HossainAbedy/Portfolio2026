@@ -129,7 +129,7 @@ export default function Hero({ site }) {
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
                 <span className="font-mono text-[11px] text-slate-500">
-                  ENTERPRISE_SECURITY_PANEL
+                  ENTERPRISE SECURITY PANEL
                 </span>
               </div>
               <span className="font-mono text-[11px] text-cyan-300">
@@ -180,7 +180,7 @@ export default function Hero({ site }) {
               <TagChip tone="red">Compliance</TagChip>
             </div>
 
-            <div className="border-b border-white/10 px-4 py-3">
+            {/* <div className="border-b border-white/10 px-4 py-3">
               <div className="grid grid-cols-3 gap-3">
                 <div className="rounded-lg border border-white/10 bg-white/5 p-3">
                   <p className="font-mono text-[11px] text-slate-500">Branches</p>
@@ -195,7 +195,7 @@ export default function Hero({ site }) {
                   <p className="mt-1 text-base font-bold text-white">45m → 8m</p>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="px-3 py-3">
               <Terminal />
