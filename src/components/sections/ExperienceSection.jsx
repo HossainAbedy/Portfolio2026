@@ -357,7 +357,7 @@ export default function ExperienceSection({
       <section className="section-pad px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
-            eyebrow="// METHODOLOGY"
+            eyebrow="METHODOLOGY"
             title="Security Philosophy"
             desc="Core principles that guide threat analysis, vulnerability research, and security architecture decisions."
           />
@@ -390,7 +390,7 @@ export default function ExperienceSection({
       <section className="section-pad px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
-            eyebrow="// EXPERIENCE"
+            eyebrow="EXPERIENCE"
             title="Professional Experience"
             desc="Banking security operations, network engineering, and software delivery across enterprise and client environments."
           />
@@ -412,7 +412,7 @@ export default function ExperienceSection({
       <section className="section-pad px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
-            eyebrow="// EDUCATION"
+            eyebrow="EDUCATION"
             title="Academic Background"
             desc="Formal education that supports the engineering and cybersecurity work."
           />
@@ -429,7 +429,7 @@ export default function ExperienceSection({
       <section className="section-pad px-6 md:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle
-            eyebrow="// CERTIFICATIONS"
+            eyebrow="CERTIFICATIONS"
             title="Licenses & Certifications"
             desc="Professional credentials that reinforce networking, security, and troubleshooting capability."
           />
@@ -450,7 +450,7 @@ export default function ExperienceSection({
     <section className="section-pad px-6 md:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
-          eyebrow="// RESEARCH"
+          eyebrow="RESEARCH"
           title="Publications & Research Work"
           desc="Peer-reviewed research and applied machine learning work demonstrating analytical depth, experimentation, and real-world problem solving."
         />
