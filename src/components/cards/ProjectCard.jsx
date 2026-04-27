@@ -68,7 +68,7 @@ export default function ProjectCard({ project, index = 0, onClick }) {
       whileHover={{ y: -6, scale: 1.01 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.45, delay: index * 0.05 }}
-      className={`group flex h-[420px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg transition-all duration-300 hover:border-white/20 ${glowMap[accent] || glowMap.cyan}`}
+      className={`group flex h-[450px] flex-col overflow-hidden rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg transition-all duration-300 hover:border-white/20 ${glowMap[accent] || glowMap.cyan}`}
     >
       <div
         className={`absolute left-0 top-0 h-[2px] w-full bg-gradient-to-r ${gradientMap[accent] || gradientMap.cyan} via-transparent to-transparent`}
