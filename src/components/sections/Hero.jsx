@@ -55,6 +55,7 @@ export default function Hero({ site }) {
             <TagChip tone="amber">Active Directory</TagChip>
             <TagChip tone="red">GPO Hardening</TagChip>
             <TagChip tone="blue">PowerShell Automation</TagChip>
+            <TagChip tone="slate">Fullstack Development</TagChip>
           </div>
 
           <div className="mb-5 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
