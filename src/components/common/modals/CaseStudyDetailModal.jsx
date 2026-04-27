@@ -160,7 +160,7 @@ export default function CaseStudyDetailModal({ study }) {
 
       {images.length > 0 && (
         <div className="overflow-hidden rounded-xl border border-white/10 bg-black/30">
-          {/* <ImageCarousel images={images} /> */}
+          <ImageCarousel images={images} />
         </div>
       )}
 
@@ -185,6 +185,14 @@ export default function CaseStudyDetailModal({ study }) {
           <SectionCard title="Context" tone={accent}>
             <p className="text-sm leading-6 text-slate-300">{contextText}</p>
           </SectionCard>
+
+          {study.specificChallenge && (
+            <SectionCard title="Specific challenge" tone={accent}>
+              <p className="text-sm leading-6 text-slate-300">
+                {study.specificChallenge}
+              </p>
+            </SectionCard>
+          )}
 
           {study.summary && (
             <SectionCard title="Executive summary" tone={accent}>
@@ -288,7 +296,9 @@ export default function CaseStudyDetailModal({ study }) {
 
           {study.metrics?.length > 0 && (
             <div className="md:col-span-2 rounded-xl border border-white/10 bg-white/5 p-4">
-              <p className="mb-2 text-xs font-mono text-slate-500">Additional signals</p>
+              <p className="mb-2 text-xs font-mono text-slate-500">
+                Additional signals
+              </p>
               <BulletList items={study.metrics} tone={accent} />
             </div>
           )}

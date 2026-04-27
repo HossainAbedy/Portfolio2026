@@ -1,5 +1,5 @@
 export const caseStudies = [
-{
+    {
         title: "Wazuh SIEM Tuning & CIS Benchmark Hardening",
         tag: "DETECTION",
         accent: "cyan",
@@ -27,33 +27,34 @@ export const caseStudies = [
             "Improve SIEM detection quality, reduce false positives, and enforce endpoint hardening through CIS benchmark controls and centralized policy management.",
 
         methodology: [
-            "Analyzed high-volume SIEM alerts and tuned noisy detections",
-            "Reviewed CIS benchmark findings to identify hardening gaps",
+            "Identified noisy Level 3 alerts and analyzed rule behavior to reduce alert fatigue",
+            "Reviewed CIS benchmark findings to identify endpoint hardening gaps",
             "Applied centralized GPO-based enforcement for endpoint baseline settings",
-            "Mapped key detections to MITRE ATT&CK techniques",
-            "Validated agent status, hygiene, and endpoint posture through dashboard review",
+            "Used local rule logic and rule dependency structure to suppress known-safe activity without losing visibility",
+            "Mapped key detections to MITRE ATT&CK techniques for clearer triage and investigation",
+            "Validated agent status, hygiene, and endpoint posture through dashboard review and SCA alignment checks",
         ],
 
         pipeline: [
             {
                 title: "Alert analysis",
-                desc: "Reviewed alert volume and event patterns to identify noisy rules and weak detection quality.",
+                desc: "Reviewed alert volume and event patterns to identify noisy rules, repeated detections, and weak signal quality.",
             },
             {
                 title: "Rule tuning",
-                desc: "Adjusted Wazuh rules and thresholds to reduce false positives and improve signal clarity.",
+                desc: "Refined Wazuh rules and thresholds, including child-rule logic and frequency-based handling, to reduce false positives and improve signal clarity.",
             },
             {
                 title: "Baseline hardening",
-                desc: "Used CIS benchmark findings and Group Policy enforcement to strengthen endpoint security posture.",
+                desc: "Used CIS benchmark findings and Group Policy enforcement to strengthen endpoint security posture and improve consistency.",
             },
             {
                 title: "Detection mapping",
-                desc: "Aligned high-value detections with MITRE ATT&CK techniques for better triage and investigation.",
+                desc: "Aligned high-value detections with MITRE ATT&CK techniques, including command and scripting activity such as obfuscated PowerShell patterns.",
             },
             {
                 title: "Operational validation",
-                desc: "Checked dashboard visibility, agent health, and endpoint hygiene to confirm ongoing effectiveness.",
+                desc: "Checked dashboard visibility, agent health, endpoint hygiene, and SCA results to confirm ongoing effectiveness.",
             },
         ],
 
@@ -62,6 +63,7 @@ export const caseStudies = [
             "Alert tuning outputs",
             "CIS benchmark findings",
             "Agent health and endpoint hygiene views",
+            "SCA checks aligned to banking baseline requirements",
         ],
 
         visualization: [
@@ -69,6 +71,7 @@ export const caseStudies = [
             "Endpoint hygiene dashboards",
             "Agent status visibility",
             "Detection coverage tracking",
+            "Security configuration assessment views",
         ],
 
         outcomes: [
@@ -89,10 +92,11 @@ export const caseStudies = [
         status: "Completed",
 
         bullets: [
-            "Analyzed high-volume alerts and tuned rules to reduce noise",
+            "Identified noisy Level 3 alerts and tuned rule logic to reduce noise",
             "Optimized CIS benchmark findings for stronger endpoint hardening",
             "Improved dashboard visibility for IT hygiene, alerts, and agent status",
             "Strengthened SOC triage quality through cleaner signal and better prioritization",
+            "Validated known-safe activity without sacrificing real threat visibility",
         ],
 
         tags: [
@@ -110,6 +114,9 @@ export const caseStudies = [
             "Banking Branch Security Hardening",
             "Active Directory Migration & Automation",
         ],
+
+        specificChallenge:
+            "A legitimate backup activity was initially generating a noisy alert pattern. I introduced rule dependency logic and controlled suppression so the safe activity stayed visible for context, while unnecessary repetition was removed from the analyst queue.",
     },
 
     {
@@ -125,10 +132,10 @@ export const caseStudies = [
             "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-4.png",
             "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-5.png",
         ],
-        desc: "Used FortiAnalyzer to review dashboards, threat activity, event monitors, and security logs for operational visibility.",
+        desc: "Used FortiAnalyzer to build centralized visibility through custom log correlation, structured review workflows, and incident grouping for operational security support.",
 
         summary:
-            "This case study focused on improving operational visibility by using FortiAnalyzer as a centralized monitoring and log correlation platform. The work supported triage, event review, and a clearer understanding of firewall-to-SOC event flow for security operations.",
+            "This case study focused on operationalizing FortiAnalyzer as an investigation and visibility platform rather than using it only as a dashboard. The work supported triage, event review, and incident grouping by turning raw firewall and security logs into usable operational context.",
 
         context:
             "Security events and firewall-generated logs needed a consistent review process so that monitoring could support triage, investigation, and operational oversight more effectively.",
@@ -137,9 +144,10 @@ export const caseStudies = [
             "Improve centralized visibility into security activity, correlate logs across dashboards and event monitors, and support faster operational review.",
 
         methodology: [
-            "Reviewed FortiAnalyzer dashboards for centralized visibility",
+            "Built structured review views for centralized visibility",
             "Investigated threat events and event monitor outputs",
-            "Correlated logs to trace security activity across the environment",
+            "Correlated logs across time and source to trace security activity",
+            "Used custom datasets or query logic to organize related events into a single investigation flow",
             "Validated firewall-to-SOC event flow for triage support",
         ],
 
@@ -150,15 +158,15 @@ export const caseStudies = [
             },
             {
                 title: "Event investigation",
-                desc: "Reviewed threat events and event monitor outputs to identify notable activity.",
+                desc: "Reviewed threat events and event monitor outputs to identify notable activity and suspicious patterns.",
             },
             {
                 title: "Log correlation",
-                desc: "Connected logs and events to support investigation and incident review.",
+                desc: "Connected logs and events to support investigation and incident review, grouping related records into meaningful operational context.",
             },
             {
                 title: "Operational validation",
-                desc: "Confirmed that firewall-to-SOC event flow was visible and usable for triage.",
+                desc: "Confirmed that firewall-to-SOC event flow was visible, searchable, and usable for triage.",
             },
         ],
 
@@ -167,6 +175,7 @@ export const caseStudies = [
             "Threat event review views",
             "Event monitor outputs",
             "Security log correlation views",
+            "Custom report or dataset outputs",
         ],
 
         visualization: [
@@ -174,6 +183,7 @@ export const caseStudies = [
             "Event monitor timelines",
             "Log correlation flows",
             "Centralized SOC visibility views",
+            "Incident-style grouped event views",
         ],
 
         outcomes: [
@@ -194,10 +204,11 @@ export const caseStudies = [
         status: "Completed",
 
         bullets: [
-            "Reviewed dashboards for centralized security visibility",
+            "Built centralized review workflows instead of only passively viewing dashboards",
             "Investigated threat events and event monitor outputs",
             "Correlated logs to support triage and incident review",
             "Improved understanding of firewall-to-SOC event flow",
+            "Used structured queries or datasets to group related logs into a cleaner investigation path",
         ],
 
         tags: [
@@ -214,6 +225,9 @@ export const caseStudies = [
             "PC Inventory & Risk Analysis Platform",
             "Active Directory Migration & Automation",
         ],
+
+        specificChallenge:
+            "A practical challenge was separating routine firewall chatter from events that deserved investigation. I structured the review flow so related logs could be grouped into a single incident view instead of forcing analysts to inspect every record manually.",
     },
 
     {
@@ -229,19 +243,25 @@ export const caseStudies = [
             "/assets/images/Case Studies/FortiGate/FortiGate-4.png",
             "/assets/images/Case Studies/FortiGate/FortiGate-5.png",
         ],
-        desc: "Reviewed FortiGate interfaces, address objects, security policies, and forward traffic to support secure branch operations.",
+        desc: "Reviewed FortiGate interfaces, address objects, application visibility, and security policies to improve perimeter control and branch network security.",
+
         summary:
-            "This case study focused on reviewing FortiGate configuration and traffic visibility to improve perimeter control and branch network security. The work helped validate interface health, policy structure, and traffic behavior for operational use.",
+            "This case study focused on reviewing and organizing FortiGate configuration to improve perimeter control, simplify policy management, and increase visibility into branch traffic behavior. The work supported both operational stability and security review.",
+
         context:
-            "Branch firewall environments required consistent review of interfaces, address objects, and policies so that connectivity and security control could be validated together.",
+            "Branch firewall environments required consistent review of interfaces, address objects, policies, and application behavior so that connectivity and security control could be validated together.",
+
         objective:
-            "Improve visibility into FortiGate perimeter configuration, confirm policy structure, and analyze traffic flow for branch security operations.",
+            "Improve visibility into FortiGate perimeter configuration, confirm policy structure, identify unauthorized or shadow IT activity, and analyze traffic flow for branch security operations.",
+
         methodology: [
             "Checked interfaces and perimeter connectivity status",
-            "Reviewed address objects and security policy structure",
-            "Analyzed forward traffic for operational insight",
+            "Reviewed address objects to simplify and standardize policy logic",
+            "Analyzed forward traffic and application control logs for operational insight",
+            "Identified unauthorized or shadow IT activity where present",
             "Supported firewall hardening and branch network control",
         ],
+
         pipeline: [
             {
                 title: "Interface review",
@@ -249,49 +269,59 @@ export const caseStudies = [
             },
             {
                 title: "Policy analysis",
-                desc: "Reviewed address objects and security policy structure to understand access control logic.",
+                desc: "Reviewed address objects and security policy structure to understand access control logic and reduce unnecessary complexity.",
             },
             {
                 title: "Traffic observation",
-                desc: "Analyzed forward traffic for operational insight and network behavior review.",
+                desc: "Analyzed forward traffic and application activity for operational insight, suspicious usage, and unauthorized behavior.",
             },
             {
                 title: "Control validation",
                 desc: "Supported firewall hardening and confirmed branch network control effectiveness.",
             },
         ],
+
         evidence: [
             "FortiGate interface screenshots",
             "Policy table review views",
             "Address object review screenshots",
             "Forward traffic monitoring views",
+            "Application control log views",
         ],
+
         visualization: [
             "Interface status dashboards",
             "Policy flow diagrams",
             "Traffic analysis views",
             "Perimeter control review screens",
+            "Application usage visibility",
         ],
+
         outcomes: [
             "Improved confidence in branch perimeter configuration",
             "Made policy structure easier to review",
             "Strengthened firewall hardening validation",
             "Improved traffic visibility for operational support",
         ],
+
         metrics: [
             "Perimeter control review completed",
-            "Policy structure validated",
+            "Policy structure simplified",
             "Traffic flow observed for operational insight",
         ],
+
         scope: "Network Security",
         focus: "Firewall Policy Review",
         status: "Completed",
+
         bullets: [
             "Checked interfaces and perimeter connectivity status",
             "Reviewed address objects and security policy structure",
-            "Analyzed forward traffic for operational insight",
+            "Analyzed forward traffic and application activity for operational insight",
             "Supported firewall hardening and branch network control",
+            "Used address objects and policy grouping to reduce policy table complexity",
         ],
+
         tags: [
             "FortiGate",
             "Firewall",
@@ -300,11 +330,15 @@ export const caseStudies = [
             "Traffic Analysis",
             "Branch Operations",
         ],
+
         relatedProjects: [
             "FortiAnalyzer Monitoring & Log Correlation",
             "Wazuh SIEM Tuning & CIS Benchmark Hardening",
             "Active Directory Migration & Automation",
         ],
+
+        specificChallenge:
+            "One practical issue was policy sprawl. I used address objects and cleaner grouping logic to simplify review and reduce the number of rules that had to be mentally processed during branch firewall validation.",
     },
 
     {
@@ -673,42 +707,57 @@ export const caseStudies = [
             "/assets/images/Case Studies/AD/AD-4.png",
             "/assets/images/Case Studies/AD/AD-5.png",
         ],
-        desc: "Executed large-scale Active Directory migration with automated post-deployment configuration across distributed banking infrastructure.",
+        desc: "Executed large-scale Active Directory migration with automated post-deployment configuration, GPO baseline enforcement, and policy updates aligned with banking compliance requirements.",
         summary:
-            "This migration initiative moved endpoints from workgroup environments into centralized domain management across a large branch footprint. Automation was used to reduce downtime, standardize workstation setup, and restore user environments after migration.",
+            "This migration initiative moved endpoints from workgroup environments into centralized domain management across a large branch footprint. Automation was used to reduce downtime, standardize workstation setup, restore user environments after migration, and keep Group Policy aligned with enterprise banking security requirements.",
         context:
-            "A large number of distributed branch systems needed to be migrated into a domain-managed environment without disrupting day-to-day work.",
+            "A large number of distributed branch systems needed to be migrated into a domain-managed environment without disrupting day-to-day work. The environment also required ongoing Group Policy creation and updates to support compliance, baseline hardening, and audit readiness.",
         objective:
-            "Migrate workgroup endpoints into Active Directory, automate post-deployment configuration, and standardize settings across all branches.",
+            "Migrate workgroup endpoints into Active Directory, automate post-deployment configuration, create and maintain GPO baselines, and standardize settings across all branches in line with banking ICT policy, ISMS, and secure configuration best practice.",
         methodology: [
             "Migrated endpoints from workgroup to domain across 125+ branches",
             "Developed reusable PowerShell automation for post-domain configuration",
-            "Automated software installation, licensing, and policy enforcement",
+            "Created and updated Group Policy Objects for password policy, Windows security settings, update behavior, and user restrictions",
+            "Aligned GPO baselines with banking compliance expectations and secure configuration standards",
+            "Applied centralized policy enforcement across Organizational Units to reduce drift",
             "Restored user environments and system configurations seamlessly",
             "Standardized domain setup aligned with organizational policies",
         ],
         pipeline: [
             {
                 title: "Pre-migration review",
-                desc: "Assessed branch endpoints and prepared migration steps for each site.",
+                desc: "Assessed branch endpoints, identified workgroup systems, and prepared migration steps for each site.",
             },
             {
                 title: "Domain migration",
                 desc: "Moved workgroup systems into centralized Active Directory management.",
             },
             {
+                title: "GPO creation and baseline design",
+                desc: "Created Group Policy Objects for password policy, Windows Update behavior, user restrictions, endpoint hardening, and other compliance-aligned controls.",
+            },
+            {
+                title: "Policy update and enforcement",
+                desc: "Updated existing GPOs over time to reflect enterprise change requests, audit findings, and banking security requirements.",
+            },
+            {
                 title: "Automation phase",
-                desc: "Applied PowerShell automation for post-domain configuration and policy enforcement.",
+                desc: "Applied PowerShell automation for post-domain configuration, policy enforcement, and branch standardization.",
             },
             {
                 title: "User restoration",
                 desc: "Recovered user desktops, documents, shortcuts, and environment settings after migration.",
+            },
+            {
+                title: "Validation and audit",
+                desc: "Validated policy application, domain state, and branch consistency using endpoint checks and compliance review.",
             },
         ],
         evidence: [
             "AD migration screenshots",
             "PowerShell automation views",
             "GPO enforcement screenshots",
+            "Policy result / RSoP validation views",
             "Post-migration environment views",
         ],
         visualization: [
@@ -716,17 +765,20 @@ export const caseStudies = [
             "Domain join status",
             "Policy enforcement views",
             "User restoration flow diagrams",
+            "GPO baseline coverage tracking",
         ],
         outcomes: [
             "Standardized workstation configuration at scale",
             "Reduced migration downtime and manual setup effort",
             "Improved consistency across branches",
             "Created a repeatable AD migration process",
+            "Strengthened compliance alignment through controlled GPO updates",
         ],
         metrics: [
             "125+ branches migrated",
             "Post-domain automation used",
             "Standardized domain configuration",
+            "Baseline GPOs created and updated for compliance",
         ],
         scope: "Infrastructure / Identity Management",
         focus: "Migration & Automation",
@@ -734,9 +786,10 @@ export const caseStudies = [
         bullets: [
             "Migrated endpoints from workgroup to domain across 125+ branches",
             "Developed reusable PowerShell automation for post-domain configuration",
+            "Created and updated Group Policy Objects for secure baseline enforcement",
             "Automated software installation, licensing, and policy enforcement",
             "Restored user environments and system configurations seamlessly",
-            "Standardized domain setup aligned with organizational policies",
+            "Standardized domain setup aligned with organizational policies and banking compliance expectations",
         ],
         tags: [
             "PowerShell",
@@ -744,12 +797,16 @@ export const caseStudies = [
             "GPO",
             "Deployment Automation",
             "Enterprise",
+            "Compliance",
+            "Security Baseline",
         ],
         relatedProjects: [
             "SafeOps Endpoint Health Review",
             "PC Inventory Deep Scan & Audit Reporting",
             "Wazuh SIEM Tuning & CIS Benchmark Hardening",
         ],
+        specificChallenge:
+            "The main challenge was keeping hundreds of endpoints consistent while policies changed over time. I used centralized GPO creation and updates to keep the branch estate aligned with banking security requirements without breaking daily operations.",
     },
 
     {
@@ -1014,83 +1071,120 @@ export const caseStudies = [
     {
         title: "Banking Branch Security Hardening",
         tag: "COMPLIANCE",
-        accent: "cyan",
+        accent: "amber",
         metricLabel: "AUDIT SUCCESS",
         metric: "100%",
-        images: ["/assets/images/branch-hardening.png"],
-        desc: "Standardized security baselines and improved compliance across distributed banking branches while maintaining continuity.",
+        image: "/assets/images/branch-hardening.png",
+
+        desc: "Standardized security baselines across distributed banking branches through Group Policy enforcement, compliance-driven hardening, audit readiness controls, and continuous remediation tracking.",
+
         summary:
-            "This case study focused on branch security hardening through baseline enforcement, compliance alignment, and controlled remediation. The objective was to improve audit readiness while keeping operations stable across distributed sites.",
+            "This initiative focused on raising branch security maturity across a distributed banking environment by enforcing consistent endpoint baselines, reducing configuration drift, and improving audit readiness. Group Policy, secure configuration standards, and operational validation processes were used to transform fragmented branch environments into centrally governed, evidence-driven infrastructure.",
+
         context:
-            "Branch environments required a consistent security baseline to satisfy audit, compliance, and operational expectations.",
+            "Branch environments operated with inconsistent configurations across endpoints, creating audit gaps, policy drift, outdated settings, and increased security exposure. Regulatory expectations, internal audit requirements, and enterprise ICT governance required stronger baseline control with measurable enforcement.",
+
         objective:
-            "Standardize branch security baselines, automate audit reporting, and improve compliance without interrupting business continuity.",
+            "Establish a centrally managed security baseline across branch endpoints, align controls with banking ICT governance requirements, and maintain continuous audit-ready visibility through policy enforcement and remediation workflows.",
+
         methodology: [
-            "Group Policy-based baseline enforcement",
-            "Automated audit reporting and remediation tracking",
-            "Aligned with regulatory and operational requirements",
+            "Audited branch endpoint configurations against internal standards and regulatory expectations",
+            "Identified policy drift across branches, departments, and workstation groups",
+            "Designed hardened baseline configurations for users, devices, and operating systems",
+            "Created and updated Group Policy Objects for password policy, account lockout, firewall, USB restrictions, update controls, and user restrictions",
+            "Applied OU-based GPO linking to align branch systems with organizational structure",
+            "Validated enforcement through endpoint checks, gpresult / RSoP review, and operational audits",
+            "Tracked exceptions and remediation items until compliance closure",
         ],
+
         pipeline: [
             {
-                title: "Baseline design",
-                desc: "Defined consistent branch security settings aligned with policy requirements.",
+                title: "Security Baseline Assessment",
+                desc: "Reviewed endpoint posture across branches to identify missing controls, outdated settings, and configuration inconsistencies.",
             },
             {
-                title: "Policy enforcement",
-                desc: "Applied Group Policy and control settings across branch systems.",
+                title: "Control Mapping",
+                desc: "Mapped required controls from enterprise ICT policy, banking governance requirements, and industry security best practice into enforceable endpoint configurations.",
             },
             {
-                title: "Audit tracking",
-                desc: "Tracked compliance state and remediation activity over time.",
+                title: "GPO Engineering",
+                desc: "Created structured Group Policy Objects for password complexity, screen lock, firewall state, Windows updates, software restrictions, device control, and user hardening settings.",
             },
             {
-                title: "Operational validation",
-                desc: "Confirmed that hardening did not disrupt daily branch operations.",
+                title: "Branch Deployment",
+                desc: "Linked policies to Organizational Units based on branch hierarchy, system roles, and user groups for scalable enforcement.",
+            },
+            {
+                title: "Validation & Evidence Collection",
+                desc: "Validated applied settings through endpoint checks, gpresult / RSoP, screenshots, and audit evidence packs.",
+            },
+            {
+                title: "Continuous Improvement",
+                desc: "Updated policies over time to address audit findings, emerging risks, new compliance requirements, and operational feedback.",
             },
         ],
+
         evidence: [
-            "Policy enforcement screenshots",
-            "Audit reporting outputs",
-            "Remediation tracking views",
-            "Baseline validation evidence",
+            "Group Policy configuration snapshots",
+            "Audit compliance reports for branch endpoints",
+            "gpresult / RSoP enforcement validation outputs",
+            "Before-and-after configuration comparisons",
+            "Exception tracking and remediation records",
         ],
+
         visualization: [
-            "Compliance tracking views",
-            "Baseline enforcement panels",
-            "Audit success dashboards",
-            "Branch readiness views",
+            "Branch compliance status dashboards",
+            "Policy coverage tracking across endpoints",
+            "Audit readiness indicators",
+            "Remediation closure trends",
+            "Security baseline maturity progress",
         ],
+
         outcomes: [
-            "Standardized security baselines",
-            "Improved compliance posture across branches",
-            "Maintained operational continuity",
-            "Strengthened audit readiness",
+            "Achieved consistent baseline security across distributed branches",
+            "Eliminated major configuration drift through centralized enforcement",
+            "Improved audit readiness with verifiable evidence and reporting",
+            "Raised endpoint security posture aligned with enterprise expectations",
+            "Reduced manual branch-by-branch hardening effort",
         ],
+
         metrics: [
-            "100% audit success target",
-            "Group Policy enforcement",
-            "Branch-wide standardization",
+            "100% audit compliance across reviewed branches",
+            "Significant reduction in policy violations",
+            "Improved visibility into endpoint security posture",
+            "Centralized baseline coverage across branch infrastructure",
         ],
-        scope: "Compliance / Branch Security",
-        focus: "Hardening & Audit Readiness",
+
+        scope: "125+ Branches",
+        focus: "GPO Hardening & Compliance Enforcement",
         status: "Completed",
+
         bullets: [
-            "Group Policy-based baseline enforcement",
+            "Group Policy-based baseline enforcement across branch endpoints",
+            "Created and updated GPOs for password, firewall, update, and user security controls",
             "Automated audit reporting and remediation tracking",
-            "Aligned with regulatory and operational requirements",
+            "Reduced configuration drift through centralized governance",
+            "Aligned branch environments with regulatory and operational requirements",
         ],
+
         tags: [
-            "Compliance",
             "Group Policy",
-            "Hardening",
-            "Audit",
+            "Windows Security",
+            "Compliance",
+            "Audit Readiness",
+            "Endpoint Hardening",
             "Branch Operations",
+            "Enterprise Governance",
         ],
+
         relatedProjects: [
-            "Wazuh SIEM Tuning & CIS Benchmark Hardening",
-            "FortiGate Policy, Interface & Traffic Review",
             "Active Directory Migration & Automation",
+            "Wazuh SIEM Tuning & CIS Benchmark Hardening",
+            "PC Inventory & Risk Analysis Platform",
         ],
+
+        specificChallenge:
+            "One major challenge was balancing strict security controls with branch usability. Policies were phased, tested, and adjusted so controls improved compliance without interrupting teller, operations, or day-to-day branch workflows.",
     },
 
     {
