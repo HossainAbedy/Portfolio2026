@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Server, Network, TriangleAlert, ShieldCheck } from "lucide-react";
 
 const BOOT_LINES = [
   { type: "info", text: "Initializing security workspace..." },
@@ -214,13 +215,41 @@ function createResponse(cmd) {
   return [`Command not found: ${cmd}. Type 'help'.`];
 }
 
-function StatusPill({ label, value, tone = "text-slate-200" }) {
+// function StatusPill({ label, value, tone = "text-slate-200" }) {
+//   return (
+//     <div className="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
+//       <p className="font-mono text-[10px] tracking-[0.2em] text-slate-500">
+//         {label}
+//       </p>
+//       <p className={`mt-1 text-sm font-semibold ${tone}`}>{value}</p>
+//     </div>
+//   );
+// }
+
+function CompactStat({ icon: Icon, label, value, tone, bar }) {
   return (
-    <div className="rounded-lg border border-white/10 bg-black/20 px-3 py-2">
-      <p className="font-mono text-[10px] tracking-[0.2em] text-slate-500">
-        {label}
-      </p>
-      <p className={`mt-1 text-sm font-semibold ${tone}`}>{value}</p>
+    <div className="rounded-md border border-white/10 bg-black/20 px-2 py-1.5">
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1.5">
+          <span className={`rounded-full border border-white/10 bg-white/5 p-1 ${tone}`}>
+            <Icon className="h-3 w-3 animate-pulse" />
+          </span>
+          <div>
+            <p className="font-mono text-[8px] leading-none tracking-[0.18em] text-slate-500">
+              {label}
+            </p>
+            <p className={`mt-0.5 text-[11px] font-semibold leading-none ${tone}`}>
+              {value}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-end gap-0.5">
+          <span className={`h-2 w-0.5 rounded-full ${bar} opacity-60`} />
+          <span className={`h-3 w-0.5 rounded-full ${bar} opacity-80 animate-pulse`} />
+          <span className={`h-2.5 w-0.5 rounded-full ${bar}`} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -395,18 +424,49 @@ export default function Terminal() {
         </div>
       </div>
 
-      <div className="grid gap-3 border-b border-white/10 p-3 md:grid-cols-4">
+      <div className="grid gap-1.5 border-b border-white/10 px-2 py-2 md:grid-cols-4">
+        <CompactStat
+          icon={Network}
+          label="Branches"
+          value="125+"
+          tone="text-white"
+          bar="bg-cyan-400"
+        />
+        <CompactStat
+          icon={Server}
+          label="Endpoints"
+          value={`${stats.endpoints.toLocaleString()}+`}
+          tone="text-white"
+          bar="bg-emerald-400"
+        />
+        <CompactStat
+          icon={TriangleAlert}
+          label="Alerts"
+          value={`${stats.alerts}`}
+          tone="text-amber-300"
+          bar="bg-amber-400"
+        />
+        <CompactStat
+          icon={ShieldCheck}
+          label="Critical"
+          value={`${stats.critical}`}
+          tone="text-red-300"
+          bar="bg-red-400"
+        />
+      </div>
+
+      {/* <div className="grid gap-3 border-b border-white/10 p-3 md:grid-cols-4">
         <StatusPill label="Branches" value="125+" tone="text-white" />
         <StatusPill label="Endpoints" value={`${stats.endpoints.toLocaleString()}+`} tone="text-white" />
         <StatusPill label="Alerts" value={`${stats.alerts}`} tone="text-amber-300" />
         <StatusPill label="Critical" value={`${stats.critical}`} tone="text-red-300" />
-      </div>
+      </div> */}
 
-      <div className="grid gap-3 border-b border-white/10 p-3 md:grid-cols-3">
+      {/* <div className="grid gap-3 border-b border-white/10 p-3 md:grid-cols-3">
         <ProgressBar label="SIEM Coverage" value={92} tone="bg-cyan-400" />
         <ProgressBar label="Policy Baseline" value={88} tone="bg-emerald-400" />
         <ProgressBar label="Audit Readiness" value={84} tone="bg-violet-400" />
-      </div>
+      </div> */}
 
       <div
         ref={terminalRef}

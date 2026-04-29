@@ -4,9 +4,30 @@ import GlassCard from "../common/GlassCard";
 import TagChip from "../common/TagChip";
 import Terminal from "../common/Terminal";
 
+function ProgressBar({ label, value, tone = "bg-emerald-400" }) {
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center justify-between">
+        <span className="font-mono text-[10px] tracking-[0.18em] text-slate-500">
+          {label}
+        </span>
+        <span className="font-mono text-[10px] text-slate-400">{value}%</span>
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+        <div className={`h-full rounded-full ${tone}`} style={{ width: `${value}%` }} />
+      </div>
+    </div>
+  );
+}
+
 export default function Hero({ site }) {
   const scrollToCaseStudies = () => {
     const section = document.getElementById("cases");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToProjects = () => {
+    const section = document.getElementById("flagship");
     if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -101,6 +122,13 @@ export default function Hero({ site }) {
               View Case Studies
             </button>
 
+                <button
+              onClick={scrollToProjects}
+              className="rounded-lg border border-violet-300/40 px-5 py-3 text-sm font-semibold text-violet-300 transition hover:bg-violet-300/10"
+            >
+              View Projects
+            </button>
+
             <a
               href={site?.linkedin || "#contact"}
               target={site?.linkedin ? "_blank" : undefined}
@@ -138,43 +166,53 @@ export default function Hero({ site }) {
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 border-b border-white/10 p-4">
-              <div className="rounded-xl border border-white/10 bg-black/20 p-3">
-                <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+            <div className="grid grid-cols-2 gap-1.5 border-b border-white/10 p-2">
+              <div className="rounded-lg border border-white/10 bg-black/20 px-2 py-1.5">
+                <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
                   AD
                 </p>
-                <p className="mt-1 text-sm font-semibold text-emerald-300">
+                <p className="mt-0.5 text-[11px] font-semibold leading-none text-emerald-300">
                   Domain Managed
                 </p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-black/20 p-3">
-                <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+
+              <div className="rounded-lg border border-white/10 bg-black/20 px-2 py-1.5">
+                <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
                   SIEM
                 </p>
-                <p className="mt-1 text-sm font-semibold text-cyan-300">
+                <p className="mt-0.5 text-[11px] font-semibold leading-none text-cyan-300">
                   Wazuh Active
                 </p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-black/20 p-3">
-                <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+
+              <div className="rounded-lg border border-white/10 bg-black/20 px-2 py-1.5">
+                <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
                   FIREWALL
                 </p>
-                <p className="mt-1 text-sm font-semibold text-violet-300">
+                <p className="mt-0.5 text-[11px] font-semibold leading-none text-violet-300">
                   FortiGate Reviewed
                 </p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-black/20 p-3">
-                <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+
+              <div className="rounded-lg border border-white/10 bg-black/20 px-2 py-1.5">
+                <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
                   COMPLIANCE
                 </p>
-                <p className="mt-1 text-sm font-semibold text-amber-300">
+                <p className="mt-0.5 text-[11px] font-semibold leading-none text-amber-300">
                   GPO Baseline
                 </p>
               </div>
             </div>
 
+            <div className="grid gap-3 border-b border-white/10 p-3 md:grid-cols-3">
+              <ProgressBar label="SIEM Coverage" value={92} tone="bg-cyan-400" />
+              <ProgressBar label="Policy Baseline" value={88} tone="bg-emerald-400" />
+              <ProgressBar label="Audit Readiness" value={84} tone="bg-violet-400" />
+            </div>
+
             <div className="flex flex-wrap gap-2 border-b border-white/10 px-4 py-2.5">
               <TagChip tone="cyan">SIEM</TagChip>
+              <TagChip tone="blue">AD</TagChip>
               <TagChip tone="violet">EDR</TagChip>
               <TagChip tone="amber">GPO</TagChip>
               <TagChip tone="green">Firewall</TagChip>
