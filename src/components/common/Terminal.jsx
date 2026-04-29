@@ -254,21 +254,21 @@ function CompactStat({ icon: Icon, label, value, tone, bar }) {
   );
 }
 
-function ProgressBar({ label, value, tone = "bg-emerald-400" }) {
-  return (
-    <div className="space-y-1.5">
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-[10px] tracking-[0.18em] text-slate-500">
-          {label}
-        </span>
-        <span className="font-mono text-[10px] text-slate-400">{value}%</span>
-      </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
-        <div className={`h-full rounded-full ${tone}`} style={{ width: `${value}%` }} />
-      </div>
-    </div>
-  );
-}
+// function ProgressBar({ label, value, tone = "bg-emerald-400" }) {
+//   return (
+//     <div className="space-y-1.5">
+//       <div className="flex items-center justify-between">
+//         <span className="font-mono text-[10px] tracking-[0.18em] text-slate-500">
+//           {label}
+//         </span>
+//         <span className="font-mono text-[10px] text-slate-400">{value}%</span>
+//       </div>
+//       <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+//         <div className={`h-full rounded-full ${tone}`} style={{ width: `${value}%` }} />
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function Terminal() {
   const [lines, setLines] = useState(() => BOOT_LINES.map(stampLine));
