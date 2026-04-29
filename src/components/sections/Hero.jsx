@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import GlassCard from "../common/GlassCard";
 import TagChip from "../common/TagChip";
+import MiniTagChip from "../common/MiniTagChip";
 import Terminal from "../common/Terminal";
 
 function ProgressBar({ label, value, tone = "bg-emerald-400" }) {
@@ -210,13 +211,16 @@ export default function Hero({ site }) {
               <ProgressBar label="Audit Readiness" value={84} tone="bg-violet-400" />
             </div>
 
-            <div className="flex flex-wrap gap-2 border-b border-white/10 px-4 py-2.5">
-              <TagChip tone="cyan">SIEM</TagChip>
-              <TagChip tone="blue">AD</TagChip>
-              <TagChip tone="violet">EDR</TagChip>
-              <TagChip tone="amber">GPO</TagChip>
-              <TagChip tone="green">Firewall</TagChip>
-              <TagChip tone="red">Compliance</TagChip>
+            <div className="flex flex-wrap gap-1 border-b border-white/10 px-2 py-1.5">
+              <MiniTagChip tone="cyan" pulse>SIEM</MiniTagChip>
+              <MiniTagChip tone="blue">AD</MiniTagChip>
+              <MiniTagChip tone="violet" pulse>EDR</MiniTagChip>
+              <MiniTagChip tone="amber">IPS/IDS</MiniTagChip>
+              <MiniTagChip tone="green">GPO</MiniTagChip>
+              <MiniTagChip tone="red" pulse>WAF</MiniTagChip>
+              <MiniTagChip tone="blue">Firewall</MiniTagChip>
+              <MiniTagChip tone="teal">MITRE</MiniTagChip>
+              <MiniTagChip tone="orange" pulse>Compliance</MiniTagChip>
             </div>
 
             {/* <div className="border-b border-white/10 px-4 py-3">
