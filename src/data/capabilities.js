@@ -22,7 +22,7 @@ export const capabilities = [
       "FortiAnalyzer log analysis and event correlation",
       "MITRE ATT&CK mapping for structured detection",
     ],
-    tags: ["Wazuh", "FortiAnalyzer", "MITRE ATT&CK"],
+    tags: ["Wazuh", "FortiAnalyzer", "MITRE"],
   },
   {
     title: "Security Automation & Orchestration",

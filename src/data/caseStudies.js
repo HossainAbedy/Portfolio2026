@@ -531,82 +531,105 @@ export const caseStudies = [
         tag: "ENGINEERING",
         accent: "indigo",
         metricLabel: "DEVICE CONTROL",
-        metric: "Bulk Managed",
+        metric: "Full-Stack Managed",
+
         image: "/assets/images/dvr-fleet.png",
-        desc: "Centralized Hikvision DVR management platform with NTP enforcement, uptime monitoring, and configuration automation.",
+
+        desc:
+            "Full-stack DVR management platform combining React control dashboard, Python orchestration backend, and PowerShell automation for Hikvision fleet operations.",
+
         summary:
-            "This case study focused on centralized administration of a DVR fleet, with emphasis on time synchronization, configuration control, and operational monitoring. It reduced manual effort while improving device consistency across the environment.",
+            "This case study demonstrates a full-stack DVR fleet management system designed for heterogeneous Hikvision firmware environments. It integrates a React-based operational dashboard, Python orchestration backend, and PowerShell execution layer to manage time synchronization, bulk password operations, and system health monitoring across distributed banking branches.",
+
         context:
-            "Hikvision DVR devices needed a consistent administrative workflow for time accuracy, bulk updates, and health monitoring at scale.",
+            "Hikvision DVR devices across distributed branches exhibited inconsistent firmware behaviors, particularly in authentication logic, admin identity naming conventions, and API response structures. This made uniform automation unreliable without a full-stack orchestration approach.",
+
         objective:
-            "Build a central control flow for DVR configuration, enforce time sync, and simplify fleet administration.",
+            "Build a centralized full-stack control system for DVR fleet management with reliable automation, firmware-aware execution logic, and real-time operational visibility.",
+
         methodology: [
-            "Time drift detection and automated NTP synchronization",
-            "Bulk password changes using Hikvision APIs",
-            "Frontend-driven configuration and monitoring pipeline",
-            "Managed device health and status from the backend",
+            "Built React-based dashboard for DVR fleet monitoring and control",
+            "Analyzed firmware inconsistencies across Hikvision device models",
+            "Implemented fallback admin identity resolution for authentication variability",
+            "Developed PowerShell automation layer for device-level execution",
+            "Built Python orchestration backend for execution control and aggregation",
+            "Standardized responses using structured JSON output model",
+            "Integrated device memory and storage monitoring for health tracking",
         ],
+
         pipeline: [
             {
-                title: "Time validation",
-                desc: "Checked device clocks and identified drift before configuration actions.",
+                title: "React control dashboard",
+                desc: "Provides centralized UI for fleet monitoring, execution control, and operational visibility.",
             },
             {
-                title: "NTP enforcement",
-                desc: "Applied synchronization to keep devices aligned to the correct time source.",
+                title: "Firmware behavior analysis",
+                desc: "Identified inconsistencies in authentication and admin identity handling across device variants.",
             },
             {
-                title: "Bulk administration",
-                desc: "Used Hikvision APIs for password and configuration changes across the fleet.",
+                title: "Adaptive authentication logic",
+                desc: "Implemented fallback admin identity resolution for heterogeneous DVR models.",
             },
             {
-                title: "Health monitoring",
-                desc: "Tracked status and uptime from the frontend for operational visibility.",
+                title: "PowerShell execution layer",
+                desc: "Executes device-level password and configuration changes through PowerShell automation.",
+            },
+            {
+                title: "Python orchestration backend",
+                desc: "Manages execution flow, retries, and aggregates results into structured JSON responses.",
+            },
+            {
+                title: "System health monitoring",
+                desc: "Tracks DVR memory usage and storage availability for operational awareness.",
             },
         ],
+
         evidence: [
-            "DVR admin screenshots",
-            "NTP enforcement views",
-            "Bulk configuration views",
-            "Monitoring dashboard screenshots",
+            "React dashboard UI screenshots",
+            "DVR configuration control views",
+            "Automation execution logs",
+            "NTP enforcement status panels",
+            "Backend JSON response outputs",
         ],
+
         visualization: [
-            "Uptime panels",
-            "Device drift indicators",
-            "Fleet health views",
-            "Configuration control screens",
+            "Fleet health dashboard (React UI)",
+            "Device uptime and status panels",
+            "Time sync drift indicators",
+            "Configuration execution history",
         ],
+
         outcomes: [
-            "Reduced manual DVR administration",
-            "Improved device time consistency across fleet",
-            "Simplified bulk configuration workflows",
-            "Improved health visibility for operations",
+            "Improved automation reliability across mixed firmware DVR environments",
+            "Reduced manual intervention in branch-level device operations",
+            "Standardized password and configuration management across fleet",
+            "Enhanced operational visibility through full-stack monitoring system",
         ],
+
         metrics: [
-            "Bulk managed device fleet",
-            "Time sync enforced",
-            "Health and uptime monitored centrally",
+            "Full-stack DVR control system deployed",
+            "Improved execution reliability across heterogeneous devices",
+            "Centralized monitoring and orchestration achieved",
         ],
-        scope: "Device Administration",
-        focus: "Fleet Management",
+
+        scope: "Full-Stack Device Management",
+        focus: "Automation Engineering & Fleet Control",
         status: "Completed",
-        bullets: [
-            "Time drift detection and automated NTP synchronization",
-            "Bulk password changes using Hikvision APIs",
-            "Frontend-driven configuration and monitoring pipeline",
-            "Managed device health and status from the backend",
-        ],
+
         tags: [
+            "React",
+            "Python Backend",
             "PowerShell",
             "Hikvision API",
-            "NTP",
             "Automation",
             "Device Management",
+            "Full-Stack Systems",
         ],
+
         relatedProjects: [
             "FortiGate Policy, Interface & Traffic Review",
-            "SafeOps Endpoint Health Review",
-            "Attendance Sync Reliability Pipeline",
+            "Wazuh SIEM Tuning & CIS Benchmark Hardening",
+            "Active Directory Migration & Automation",
         ],
     },
 

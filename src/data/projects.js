@@ -231,65 +231,102 @@ export const projects = [
     {
         title: "DVR Fleet Administration",
         subtitle: "Time Sync, Bulk Control, and Configuration Automation",
-        desc: "A centralized Hikvision DVR management workflow for NTP enforcement, bulk password changes, and configuration automation.",
+        desc: "A full-stack DVR fleet management system combining React-based control dashboard, Python orchestration backend, and PowerShell execution layer for managing mixed Hikvision firmware environments.",
+
         objective:
-            "Centralize the management of DVR fleets so time drift, password updates, and configuration changes can be handled consistently across distributed sites.",
+            "Centralize DVR fleet operations so time drift, password management, and configuration updates can be handled consistently across distributed banking branches with heterogeneous firmware behavior.",
+
         type: "Device Management",
         risk: "Medium",
         coverage: "CCTV / DVR Fleet",
         status: "Operational",
-        tags: ["PowerShell", "Hikvision API", "NTP", "Automation"],
+
+        tags: [
+            "React Frontend",
+            "Python Backend",
+            "PowerShell",
+            "Hikvision API",
+            "NTP",
+            "Automation",
+            "JSON Orchestration"
+        ],
+
         accent: "green",
         icon: Video,
+
         images: [
             "/assets/images/Projects/DVR-System/DVR-1.png",
             "/assets/images/Projects/DVR-System/DVR-2.png",
         ],
+
         summary:
-            "Built to keep DVR fleets synchronized, centrally manageable, and easier to maintain through a control-plane style workflow.",
+            "Built a full-stack DVR control platform featuring a React-based operational dashboard, Python orchestration backend, and PowerShell execution engine. The system handles mixed Hikvision firmware inconsistencies through adaptive authentication logic, fallback admin identity resolution, and structured JSON-based device reporting.",
+
         pipeline: [
             {
+                title: "React control dashboard",
+                desc: "Frontend interface for monitoring DVR fleet health, executing bulk operations, and visualizing device status in real time.",
+            },
+            {
                 title: "Device time validation",
-                desc: "Checks DVR clock accuracy and identifies time drift that may affect logging and event correlation.",
+                desc: "Checks DVR clock accuracy and detects drift affecting logs and forensic traceability.",
             },
             {
-                title: "NTP enforcement",
-                desc: "Applies time synchronization rules to keep DVRs aligned across the fleet.",
+                title: "Firmware-aware NTP enforcement",
+                desc: "Applies time synchronization logic adapted to different Hikvision firmware behaviors.",
             },
             {
-                title: "Bulk administrative actions",
-                desc: "Uses Hikvision API workflows for password changes and related device management actions at scale.",
+                title: "Bulk password automation engine",
+                desc: "Executes PowerShell-based password updates with fallback admin identity handling across heterogeneous devices.",
             },
             {
-                title: "Operational visibility",
-                desc: "Surfaces health and status information in the frontend for easier maintenance and review.",
+                title: "Python orchestration layer",
+                desc: "Coordinates execution, handles retries, aggregates responses, and returns structured JSON status per device.",
+            },
+            {
+                title: "System health monitoring",
+                desc: "Collects DVR memory usage and storage availability metrics for operational visibility.",
             },
         ],
+
         highlights: [
-            "Device time validation and NTP sync enforcement",
-            "Bulk password changes through Hikvision APIs",
-            "Backend processing for configuration management",
-            "Uptime and health visibility from the frontend",
+            "Full-stack DVR management system (React + Python + PowerShell)",
+            "Mixed firmware handling with adaptive authentication logic",
+            "Fallback admin identity resolution for Hikvision device variations",
+            "Structured JSON-based execution and reporting pipeline",
+            "Device storage and memory monitoring integrated into control dashboard",
         ],
+
         visualization: [
-            "Fleet health overview",
-            "Uptime visibility",
-            "Time sync status",
-            "Configuration state tracking",
+            "Fleet health dashboard (React UI)",
+            "Device status & uptime panels",
+            "Time sync drift monitoring",
+            "Configuration execution logs",
         ],
+
         auditUse: [
-            "Useful for CCTV time consistency checks during audits",
-            "Supports operational review of fleet health and security posture",
-            "Helps document centralized device management controls",
+            "Supports CCTV operational audit checks across branches",
+            "Provides centralized visibility for device configuration control",
+            "Documents controlled administrative actions for compliance review",
         ],
-        stack: ["PowerShell", "Hikvision API", "NTP", "Backend Automation"],
+
+        stack: [
+            "React",
+            "Python Backend",
+            "PowerShell",
+            "Hikvision API",
+            "NTP",
+            "Automation",
+        ],
+
         impact: [
-            "Reduced manual DVR administration",
-            "Improved device time consistency across the fleet",
-            "Simplified bulk configuration workflows",
+            "Reduced manual DVR administration across branches",
+            "Improved reliability across mixed firmware Hikvision deployments",
+            "Enabled scalable bulk device management through a unified control plane",
         ],
+
         relatedProjects: [
-            "Supports the same operational discipline used across branch infrastructure and audit workflows.",
+            "Supports enterprise branch infrastructure automation and security operations workflows.",
         ],
     },
 
