@@ -1095,20 +1095,20 @@ export const caseStudies = [
         title: "Banking Branch Security Hardening",
         tag: "COMPLIANCE",
         accent: "amber",
-        metricLabel: "AUDIT SUCCESS",
-        metric: "100%",
+        metricLabel: "AUDIT READINESS",
+        metric: "Baseline Enforced",
         image: "/assets/images/branch-hardening.png",
 
-        desc: "Standardized security baselines across distributed banking branches through Group Policy enforcement, compliance-driven hardening, audit readiness controls, and continuous remediation tracking.",
+        desc: "Standardized security baselines across distributed banking branches through Group Policy enforcement, compliance-driven hardening, audit readiness controls, and remediation tracking.",
 
         summary:
-            "This initiative focused on raising branch security maturity across a distributed banking environment by enforcing consistent endpoint baselines, reducing configuration drift, and improving audit readiness. Group Policy, secure configuration standards, and operational validation processes were used to transform fragmented branch environments into centrally governed, evidence-driven infrastructure.",
+            "This case study focused on improving branch security posture across a distributed banking environment by enforcing consistent endpoint baselines, reducing configuration drift, and strengthening audit readiness. Group Policy, secure configuration standards, and operational validation were used to bring branch systems under centralized governance.",
 
         context:
-            "Branch environments operated with inconsistent configurations across endpoints, creating audit gaps, policy drift, outdated settings, and increased security exposure. Regulatory expectations, internal audit requirements, and enterprise ICT governance required stronger baseline control with measurable enforcement.",
+            "Branch environments operated with inconsistent configurations across endpoints, creating audit gaps, policy drift, outdated settings, and increased security exposure. Internal audit requirements and enterprise ICT governance called for stronger baseline control with measurable enforcement.",
 
         objective:
-            "Establish a centrally managed security baseline across branch endpoints, align controls with banking ICT governance requirements, and maintain continuous audit-ready visibility through policy enforcement and remediation workflows.",
+            "Establish a centrally managed security baseline across branch endpoints, align controls with banking ICT governance requirements, and maintain audit-ready visibility through policy enforcement and remediation workflows.",
 
         methodology: [
             "Audited branch endpoint configurations against internal standards and regulatory expectations",
@@ -1117,33 +1117,33 @@ export const caseStudies = [
             "Created and updated Group Policy Objects for password policy, account lockout, firewall, USB restrictions, update controls, and user restrictions",
             "Applied OU-based GPO linking to align branch systems with organizational structure",
             "Validated enforcement through endpoint checks, gpresult / RSoP review, and operational audits",
-            "Tracked exceptions and remediation items until compliance closure",
+            "Tracked exceptions and remediation items until closure",
         ],
 
         pipeline: [
             {
-                title: "Security Baseline Assessment",
+                title: "Security baseline assessment",
                 desc: "Reviewed endpoint posture across branches to identify missing controls, outdated settings, and configuration inconsistencies.",
             },
             {
-                title: "Control Mapping",
-                desc: "Mapped required controls from enterprise ICT policy, banking governance requirements, and industry security best practice into enforceable endpoint configurations.",
+                title: "Control mapping",
+                desc: "Mapped required controls from enterprise ICT policy, banking governance requirements, and security best practice into enforceable endpoint configurations.",
             },
             {
-                title: "GPO Engineering",
+                title: "GPO engineering",
                 desc: "Created structured Group Policy Objects for password complexity, screen lock, firewall state, Windows updates, software restrictions, device control, and user hardening settings.",
             },
             {
-                title: "Branch Deployment",
+                title: "Branch deployment",
                 desc: "Linked policies to Organizational Units based on branch hierarchy, system roles, and user groups for scalable enforcement.",
             },
             {
-                title: "Validation & Evidence Collection",
+                title: "Validation and evidence collection",
                 desc: "Validated applied settings through endpoint checks, gpresult / RSoP, screenshots, and audit evidence packs.",
             },
             {
-                title: "Continuous Improvement",
-                desc: "Updated policies over time to address audit findings, emerging risks, new compliance requirements, and operational feedback.",
+                title: "Continuous improvement",
+                desc: "Updated policies over time to address audit findings, emerging risks, and operational feedback.",
             },
         ],
 
@@ -1165,14 +1165,14 @@ export const caseStudies = [
 
         outcomes: [
             "Achieved consistent baseline security across distributed branches",
-            "Eliminated major configuration drift through centralized enforcement",
+            "Reduced configuration drift through centralized enforcement",
             "Improved audit readiness with verifiable evidence and reporting",
             "Raised endpoint security posture aligned with enterprise expectations",
             "Reduced manual branch-by-branch hardening effort",
         ],
 
         metrics: [
-            "100% audit compliance across reviewed branches",
+            "Baseline enforcement completed across reviewed branches",
             "Significant reduction in policy violations",
             "Improved visibility into endpoint security posture",
             "Centralized baseline coverage across branch infrastructure",
@@ -1215,28 +1215,34 @@ export const caseStudies = [
         tag: "APPSEC",
         accent: "sky",
         metricLabel: "CRITICAL FIXES",
-        metric: "Dozens Resolved",
+        metric: "Issues Resolved",
         images: ["/assets/images/appsec-review.png"],
-        desc: "Identified and remediated critical vulnerabilities through manual and AI-assisted code review.",
+        desc: "Identified and remediated application security issues through manual and AI-assisted code review.",
+
         summary:
-            "This case study focused on source code review for common and logic-based vulnerabilities. It combined manual analysis with AI-assisted checks to improve secure development outcomes and catch issues before release.",
+            "This case study focused on source code review for common security weaknesses and logic-based flaws. Manual analysis and AI-assisted checks were used to identify risky patterns, validate findings, and support secure development improvements before release.",
+
         context:
-            "Applications needed practical review support to identify risky patterns, security flaws, and logic problems before deployment.",
+            "Applications needed practical review support to identify insecure patterns, weak validation, and logic problems before deployment.",
+
         objective:
             "Detect and resolve application security issues through structured code review and secure development feedback.",
+
         methodology: [
             "OWASP Top 10 and logic flaw identification",
             "Manual and AI-assisted analysis techniques",
-            "Improved secure development practices",
+            "Review of input handling, auth logic, and output handling where applicable",
+            "Secure development feedback and remediation validation",
         ],
+
         pipeline: [
             {
                 title: "Code inspection",
-                desc: "Reviewed application code paths for common security weaknesses and logic flaws.",
+                desc: "Reviewed application code paths for security weaknesses, validation issues, and logic flaws.",
             },
             {
                 title: "Issue validation",
-                desc: "Confirmed exploitability and prioritized vulnerabilities for remediation.",
+                desc: "Confirmed exploitability where possible and prioritized vulnerabilities for remediation.",
             },
             {
                 title: "Secure feedback",
@@ -1247,37 +1253,44 @@ export const caseStudies = [
                 desc: "Re-checked fixes and validated that issues were resolved correctly.",
             },
         ],
+
         evidence: [
             "Code review screenshots",
             "Issue notes and findings",
             "Remediation validation views",
             "OWASP-aligned review outputs",
         ],
+
         visualization: [
             "Security finding breakdowns",
             "Issue severity panels",
             "Code flow review screens",
             "Validation checklists",
         ],
+
         outcomes: [
-            "Resolved critical code issues",
+            "Resolved application security issues identified during review",
             "Improved secure coding awareness",
             "Reduced vulnerability exposure before release",
             "Supported stronger development practices",
         ],
+
         metrics: [
-            "Dozens of fixes resolved",
+            "Security issues identified and remediated",
             "OWASP-aligned review",
-            "Manual + AI-assisted analysis",
+            "Manual and AI-assisted analysis",
         ],
+
         scope: "Application Security",
         focus: "Code Review & Remediation",
         status: "Completed",
+
         bullets: [
             "OWASP Top 10 and logic flaw identification",
             "Manual and AI-assisted analysis techniques",
             "Improved secure development practices",
         ],
+
         tags: [
             "AppSec",
             "OWASP",
@@ -1285,6 +1298,7 @@ export const caseStudies = [
             "Secure Development",
             "AI-Assisted",
         ],
+
         relatedProjects: [
             "Security & Infrastructure Automation",
             "PC Inventory Deep Scan & Audit Reporting",
@@ -1296,21 +1310,26 @@ export const caseStudies = [
         title: "Network Security Audit",
         tag: "NETWORK",
         accent: "slate",
-        metricLabel: "POLICY ISSUES",
-        metric: "Hundreds Identified",
+        metricLabel: "POLICY REVIEW",
+        metric: "Findings Identified",
         images: ["/assets/images/network-audit.png"],
-        desc: "Performed firewall and segmentation audits across enterprise environments and hardened configurations based on findings.",
+        desc: "Performed firewall, segmentation, and traffic review across enterprise environments and hardened configurations based on findings.",
+
         summary:
             "This case study focused on network security review across firewall policy, segmentation, and IDS/IPS behavior. The goal was to improve perimeter posture and identify policy issues that could weaken enforcement or visibility.",
+
         context:
             "Enterprise network environments needed structured review of firewall rules, segmentation design, and intrusion detection settings.",
+
         objective:
             "Identify policy gaps, improve segmentation, and harden the network security posture based on audit findings.",
+
         methodology: [
             "Firewall rule review and optimization",
             "Segmentation strategy improvements",
             "IDS/IPS tuning for real-world traffic",
         ],
+
         pipeline: [
             {
                 title: "Firewall review",
@@ -1329,37 +1348,44 @@ export const caseStudies = [
                 desc: "Applied configuration improvements based on audit findings.",
             },
         ],
+
         evidence: [
             "Firewall audit screenshots",
             "Segmentation review outputs",
             "IDS/IPS tuning views",
             "Network policy issue records",
         ],
+
         visualization: [
             "Policy review dashboards",
             "Segmentation flow diagrams",
             "Traffic tuning views",
             "Firewall hardening panels",
         ],
+
         outcomes: [
             "Improved firewall rule quality",
             "Strengthened segmentation posture",
             "Better IDS/IPS tuning for operational traffic",
-            "Identified and reduced policy issues",
+            "Reduced policy issues across review areas",
         ],
+
         metrics: [
-            "Hundreds of policy issues identified",
+            "Policy issues identified and reviewed",
             "Segmentation improvements applied",
             "IDS/IPS tuning completed",
         ],
+
         scope: "Network Security",
-        focus: "Audit & Hardening",
+        focus: "Audit and Hardening",
         status: "Completed",
+
         bullets: [
             "Firewall rule review and optimization",
             "Segmentation strategy improvements",
             "IDS/IPS tuning for real-world traffic",
         ],
+
         tags: [
             "Network",
             "Firewall",
@@ -1367,6 +1393,7 @@ export const caseStudies = [
             "IDS/IPS",
             "Audit",
         ],
+
         relatedProjects: [
             "FortiGate Policy, Interface & Traffic Review",
             "FortiAnalyzer Monitoring & Log Correlation",
@@ -1381,78 +1408,106 @@ export const caseStudies = [
         metricLabel: "RISK REDUCTION",
         metric: "Critical → Controlled",
         images: ["/assets/images/vapt.png"],
-        desc: "Conducted vulnerability assessments and penetration testing with structured remediation planning and validation.",
+        desc: "Conducted banking-sector vulnerability assessment and penetration testing across network devices and security platforms, with structured validation, risk scoring, and remediation planning.",
+
         summary:
-            "This case study covered vulnerability assessment and controlled testing to identify exploitable weaknesses and prioritize remediation. The focus was on validating risk and tracking improvements after fixes were applied.",
+            "This case study covered controlled vulnerability assessment and penetration testing for SBAC Bank infrastructure, including internal and external network-facing assets. The engagement validated exploitable weaknesses, prioritized findings by business impact, and supported structured remediation and retesting to move critical exposure into a controlled state.",
+
         context:
-            "Systems and applications required structured vulnerability review so critical weaknesses could be confirmed, ranked, and remediated in a controlled way.",
+            "Branch and perimeter systems required a structured security review so externally exposed services, authentication controls, transport protections, and legacy protocols could be validated, ranked, and remediated in a controlled way.",
+
         objective:
-            "Assess security weaknesses, validate exposure, and support structured remediation planning and verification.",
+            "Assess security weaknesses across network devices and related services, validate exposure through safe testing, and support structured remediation planning, verification, and risk reduction.",
+
         methodology: [
             "Black-box and white-box testing approaches",
-            "Exploit validation and risk scoring",
-            "Remediation tracking and verification",
+            "Reconnaissance, service enumeration, and exposure review using manual and automated tools",
+            "Exploit validation and CVSS-based risk scoring",
+            "Controlled testing of authentication, rate limiting, transport security, and file handling weaknesses",
+            "Remediation tracking and retest verification",
         ],
+
         pipeline: [
             {
                 title: "Discovery",
-                desc: "Identified exposed services, entry points, and potential weaknesses for review.",
+                desc: "Identified exposed services, public entry points, and potentially vulnerable network and application components for review.",
             },
             {
-                title: "Validation",
-                desc: "Confirmed exploitability where appropriate and scored the risk of findings.",
+                title: "Enumeration and validation",
+                desc: "Profiled accessible services, checked for weak controls, and confirmed exploitable exposure where appropriate using controlled testing.",
+            },
+            {
+                title: "Risk analysis",
+                desc: "Ranked findings such as no rate limit, SSH brute force exposure, HTTP verb tampering, Slowloris, FTP exposure, and LFI by severity and impact.",
             },
             {
                 title: "Remediation planning",
-                desc: "Grouped issues into priority levels for structured fix planning.",
+                desc: "Grouped issues into priority levels and mapped them to practical fixes such as rate limiting, stronger authentication, protocol hardening, and input validation.",
             },
             {
                 title: "Retest",
-                desc: "Verified remediation and checked that the original issue was controlled.",
+                desc: "Verified remediation efforts and confirmed that the original exposure was reduced or controlled.",
             },
         ],
+
         evidence: [
             "Assessment screenshots",
             "Exploit validation notes",
             "Risk scoring outputs",
             "Remediation tracking views",
+            "Retest verification results",
         ],
+
         visualization: [
             "Risk reduction progress",
             "Finding severity panels",
             "Retest verification views",
             "VAPT workflow diagrams",
+            "Exploitability and control status views",
         ],
+
         outcomes: [
             "Critical risk controlled",
             "Improved understanding of exploitable exposure",
             "Structured remediation and verification process",
             "Clearer prioritization of security issues",
+            "Better visibility into perimeter and device security posture",
         ],
+
         metrics: [
             "Critical → Controlled",
             "Exploit validation completed",
             "Remediation verification supported",
         ],
+
         scope: "Vulnerability Assessment / Pentest",
         focus: "Risk Validation",
         status: "Completed",
+
         bullets: [
             "Black-box and white-box testing approaches",
             "Exploit validation and risk scoring",
             "Remediation tracking and verification",
+            "Assessment of rate limiting, SSH exposure, transport security, and legacy service risk",
         ],
+
         tags: [
             "VAPT",
             "Pentest",
             "Risk Scoring",
             "Exploit Validation",
             "Remediation",
+            "Network Security",
+            "Banking",
         ],
+
         relatedProjects: [
             "AppSec Code Review",
             "Network Security Audit",
             "PC Inventory Deep Scan & Audit Reporting",
         ],
-    },
+
+        specificChallenge:
+            "A key challenge was separating true exploitability from exposed-but-not-immediately-critical findings. I focused on validating only what was safe and relevant in scope, then translating each weakness into practical remediation that reduced business risk without disrupting operations.",
+    }
 ];
