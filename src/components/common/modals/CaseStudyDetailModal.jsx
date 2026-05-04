@@ -160,7 +160,7 @@ export default function CaseStudyDetailModal({ study }) {
 
       {images.length > 0 && (
         <div className="overflow-hidden rounded-xl border border-white/10 bg-black/30">
-          <ImageCarousel images={images} />
+          {/* <ImageCarousel images={images} /> */}
         </div>
       )}
 

@@ -1,5 +1,127 @@
 export const caseStudies = [
     {
+        title: "Network Device Vulnerability Assessment",
+        tag: "PENTEST",
+        accent: "red",
+        metricLabel: "RISK REDUCTION",
+        metric: "High ↓ Controlled",
+        images: [
+            "/assets/images/Case Studies/VAPT/VAPT-1.png",
+            "/assets/images/Case Studies/VAPT/VAPT-2.png",
+            "/assets/images/Case Studies/VAPT/VAPT-3.png",
+            "/assets/images/Case Studies/VAPT/VAPT-4.png",
+            "/assets/images/Case Studies/VAPT/VAPT-5.png",
+            "/assets/images/Case Studies/VAPT/VAPT-6.png",
+            "/assets/images/Case Studies/VAPT/VAPT-7.png",
+            "/assets/images/Case Studies/VAPT/VAPT-8.png",
+            "/assets/images/Case Studies/VAPT/VAPT-9.png",
+            "/assets/images/Case Studies/VAPT/VAPT-10.png",
+        ],
+        desc: "Conducted banking-sector vulnerability assessment and penetration testing across exposed network devices and management services, with controlled validation, risk scoring, and remediation planning.",
+
+        summary:
+            "This case study covered controlled vulnerability assessment and penetration testing for SBAC Bank network infrastructure, including internal and external device-facing services. The engagement validated exploitable weaknesses, prioritized findings by business impact, and supported structured remediation and retesting to move exposure into a controlled state.",
+
+        context:
+            "Core routing and perimeter systems required a structured security review so externally exposed services, authentication controls, transport protections, and legacy protocols could be validated, ranked, and remediated in a controlled way.",
+
+        objective:
+            "Assess security weaknesses across network devices and related services, validate exposure through safe testing, and support structured remediation planning, verification, and risk reduction.",
+
+        methodology: [
+            "Black-box and controlled validation testing",
+            "Reconnaissance, service enumeration, and exposure review using manual and automated tools",
+            "Exploit validation and CVSS-based risk scoring",
+            "Controlled testing of authentication, rate limiting, transport security, and file handling weaknesses",
+            "Remediation tracking and retest verification",
+        ],
+
+        pipeline: [
+            {
+                title: "Discovery",
+                desc: "Identified exposed services, public entry points, and potentially vulnerable network and management components for review.",
+            },
+            {
+                title: "Enumeration and validation",
+                desc: "Profiled accessible services, checked for weak controls, and confirmed exploitable exposure where appropriate using controlled testing.",
+            },
+            {
+                title: "Risk analysis",
+                desc: "Ranked findings such as no rate limit, SSH brute force exposure, HTTP verb tampering, Slowloris, FTP exposure, and LFI by severity and impact.",
+            },
+            {
+                title: "Remediation planning",
+                desc: "Grouped issues into priority levels and mapped them to practical fixes such as rate limiting, stronger authentication, protocol hardening, and input validation.",
+            },
+            {
+                title: "Retest",
+                desc: "Verified remediation efforts and confirmed that the original exposure was reduced or controlled.",
+            },
+        ],
+
+        evidence: [
+            "Assessment screenshots",
+            "Exploit validation notes",
+            "Risk scoring outputs",
+            "Remediation tracking views",
+            "Retest verification results",
+        ],
+
+        visualization: [
+            "Risk reduction progress",
+            "Finding severity panels",
+            "Retest verification views",
+            "VAPT workflow diagrams",
+            "Exploitability and control status views",
+        ],
+
+        outcomes: [
+            "Critical risk controlled",
+            "Improved understanding of exploitable exposure",
+            "Structured remediation and verification process",
+            "Clearer prioritization of security issues",
+            "Better visibility into perimeter and device security posture",
+        ],
+
+        metrics: [
+            "Critical → Controlled",
+            "Exploit validation completed",
+            "Remediation verification supported",
+        ],
+
+        scope: "Network Device Vulnerability Assessment / Pentest",
+        focus: "Risk Validation",
+        status: "Completed",
+
+        bullets: [
+            "Black-box and controlled validation testing",
+            "Exploit validation and risk scoring",
+            "Remediation tracking and verification",
+            "Assessment of rate limiting, SSH exposure, transport security, and legacy service risk",
+        ],
+
+        tags: [
+            "VAPT",
+            "Pentest",
+            "Risk Scoring",
+            "Exploit Validation",
+            "Remediation",
+            "Network Security",
+            "Banking",
+            "Network Devices",
+        ],
+
+        relatedProjects: [
+            "AppSec Code Review",
+            "Network Security Audit",
+            "PC Inventory Deep Scan & Audit Reporting",
+        ],
+
+        specificChallenge:
+            "A key challenge was separating true exploitability from exposed-but-not-immediately-critical findings. I focused on validating only what was safe and relevant in scope, then translating each weakness into practical remediation that reduced business risk without disrupting operations.",
+    },
+    
+    {
         title: "Wazuh SIEM Tuning & CIS Benchmark Hardening",
         tag: "DETECTION",
         accent: "cyan",
@@ -124,7 +246,7 @@ export const caseStudies = [
         tag: "MONITORING",
         accent: "green",
         metricLabel: "LOG VISIBILITY",
-        metric: "Centralized Analysis",
+        metric: "Centralized ↔ Analysis",
         images: [
             "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-1.png",
             "/assets/images/Case Studies/FortiAnalyzer/FortiAnalyzer-2.png",
@@ -235,7 +357,7 @@ export const caseStudies = [
         tag: "NETWORK",
         accent: "violet",
         metricLabel: "PERIMETER CONTROL",
-        metric: "Policy & Traffic Review",
+        metric: "Policy & Traffic ➣ Review",
         images: [
             "/assets/images/Case Studies/FortiGate/FortiGate-1.png",
             "/assets/images/Case Studies/FortiGate/FortiGate-2.png",
@@ -346,7 +468,7 @@ export const caseStudies = [
         tag: "DETECTION",
         accent: "amber",
         metricLabel: "RISK MAPPED TO MITRE",
-        metric: "Endpoint Risk Scoring",
+        metric: "Endpoint ⊕ Risk Scoring ",
         images: [
             "/assets/images/Projects/PC-Inventory/PC-Inventory-1.png",
             "/assets/images/Projects/PC-Inventory/PC-Inventory-2.png",
@@ -446,7 +568,7 @@ export const caseStudies = [
         tag: "AUTOMATION",
         accent: "blue",
         metricLabel: "CONSISTENCY CONTROL",
-        metric: "Thread-Safe Sync",
+        metric: "Thread-Safe ✔ Sync",
         image: "/assets/images/attendance-sync.png",
         desc: "Automated ZKTeco attendance collection with duplicate prevention and reliable HR system synchronization.",
         summary:
@@ -531,7 +653,7 @@ export const caseStudies = [
         tag: "ENGINEERING",
         accent: "indigo",
         metricLabel: "DEVICE CONTROL",
-        metric: "Full-Stack Managed",
+        metric: "Full-Stack ⚙ Managed",
 
         image: "/assets/images/dvr-fleet.png",
 
@@ -638,7 +760,7 @@ export const caseStudies = [
         tag: "OPERATIONS",
         accent: "violet",
         metricLabel: "HEALTH STATUS",
-        metric: "Real-Time Visibility",
+        metric: "Real-Time ◎ Visibility",
         image: "/assets/images/safeops-health.png",
         desc: "Internal system for endpoint health monitoring, audit preparation, operational readiness checks, and critical update validation.",
         summary:
@@ -1092,11 +1214,11 @@ export const caseStudies = [
     },
 
     {
-        title: "Banking Branch Security Hardening",
+        title: "Banking Security Hardening",
         tag: "COMPLIANCE",
         accent: "amber",
         metricLabel: "AUDIT READINESS",
-        metric: "Baseline Enforced",
+        metric: "Baseline ↑ Enforced ",
         image: "/assets/images/branch-hardening.png",
 
         desc: "Standardized security baselines across distributed banking branches through Group Policy enforcement, compliance-driven hardening, audit readiness controls, and remediation tracking.",
@@ -1215,7 +1337,7 @@ export const caseStudies = [
         tag: "APPSEC",
         accent: "sky",
         metricLabel: "CRITICAL FIXES",
-        metric: "Issues Resolved",
+        metric: "Issues ↗ Resolved",
         images: ["/assets/images/appsec-review.png"],
         desc: "Identified and remediated application security issues through manual and AI-assisted code review.",
 
@@ -1311,7 +1433,7 @@ export const caseStudies = [
         tag: "NETWORK",
         accent: "slate",
         metricLabel: "POLICY REVIEW",
-        metric: "Findings Identified",
+        metric: "Findings ↘ Identified",
         images: ["/assets/images/network-audit.png"],
         desc: "Performed firewall, segmentation, and traffic review across enterprise environments and hardened configurations based on findings.",
 
@@ -1400,114 +1522,4 @@ export const caseStudies = [
             "Banking Branch Security Hardening",
         ],
     },
-
-    {
-        title: "Vulnerability Assessment",
-        tag: "PENTEST",
-        accent: "red",
-        metricLabel: "RISK REDUCTION",
-        metric: "Critical → Controlled",
-        images: ["/assets/images/vapt.png"],
-        desc: "Conducted banking-sector vulnerability assessment and penetration testing across network devices and security platforms, with structured validation, risk scoring, and remediation planning.",
-
-        summary:
-            "This case study covered controlled vulnerability assessment and penetration testing for SBAC Bank infrastructure, including internal and external network-facing assets. The engagement validated exploitable weaknesses, prioritized findings by business impact, and supported structured remediation and retesting to move critical exposure into a controlled state.",
-
-        context:
-            "Branch and perimeter systems required a structured security review so externally exposed services, authentication controls, transport protections, and legacy protocols could be validated, ranked, and remediated in a controlled way.",
-
-        objective:
-            "Assess security weaknesses across network devices and related services, validate exposure through safe testing, and support structured remediation planning, verification, and risk reduction.",
-
-        methodology: [
-            "Black-box and white-box testing approaches",
-            "Reconnaissance, service enumeration, and exposure review using manual and automated tools",
-            "Exploit validation and CVSS-based risk scoring",
-            "Controlled testing of authentication, rate limiting, transport security, and file handling weaknesses",
-            "Remediation tracking and retest verification",
-        ],
-
-        pipeline: [
-            {
-                title: "Discovery",
-                desc: "Identified exposed services, public entry points, and potentially vulnerable network and application components for review.",
-            },
-            {
-                title: "Enumeration and validation",
-                desc: "Profiled accessible services, checked for weak controls, and confirmed exploitable exposure where appropriate using controlled testing.",
-            },
-            {
-                title: "Risk analysis",
-                desc: "Ranked findings such as no rate limit, SSH brute force exposure, HTTP verb tampering, Slowloris, FTP exposure, and LFI by severity and impact.",
-            },
-            {
-                title: "Remediation planning",
-                desc: "Grouped issues into priority levels and mapped them to practical fixes such as rate limiting, stronger authentication, protocol hardening, and input validation.",
-            },
-            {
-                title: "Retest",
-                desc: "Verified remediation efforts and confirmed that the original exposure was reduced or controlled.",
-            },
-        ],
-
-        evidence: [
-            "Assessment screenshots",
-            "Exploit validation notes",
-            "Risk scoring outputs",
-            "Remediation tracking views",
-            "Retest verification results",
-        ],
-
-        visualization: [
-            "Risk reduction progress",
-            "Finding severity panels",
-            "Retest verification views",
-            "VAPT workflow diagrams",
-            "Exploitability and control status views",
-        ],
-
-        outcomes: [
-            "Critical risk controlled",
-            "Improved understanding of exploitable exposure",
-            "Structured remediation and verification process",
-            "Clearer prioritization of security issues",
-            "Better visibility into perimeter and device security posture",
-        ],
-
-        metrics: [
-            "Critical → Controlled",
-            "Exploit validation completed",
-            "Remediation verification supported",
-        ],
-
-        scope: "Vulnerability Assessment / Pentest",
-        focus: "Risk Validation",
-        status: "Completed",
-
-        bullets: [
-            "Black-box and white-box testing approaches",
-            "Exploit validation and risk scoring",
-            "Remediation tracking and verification",
-            "Assessment of rate limiting, SSH exposure, transport security, and legacy service risk",
-        ],
-
-        tags: [
-            "VAPT",
-            "Pentest",
-            "Risk Scoring",
-            "Exploit Validation",
-            "Remediation",
-            "Network Security",
-            "Banking",
-        ],
-
-        relatedProjects: [
-            "AppSec Code Review",
-            "Network Security Audit",
-            "PC Inventory Deep Scan & Audit Reporting",
-        ],
-
-        specificChallenge:
-            "A key challenge was separating true exploitability from exposed-but-not-immediately-critical findings. I focused on validating only what was safe and relevant in scope, then translating each weakness into practical remediation that reduced business risk without disrupting operations.",
-    }
 ];
