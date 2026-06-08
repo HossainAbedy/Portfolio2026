@@ -1431,7 +1431,7 @@ export const caseStudies = [
     {
         title: "Network Security Audit",
         tag: "NETWORK",
-        accent: "slate",
+        accent: "lime",
         metricLabel: "POLICY REVIEW",
         metric: "Findings ↘ Identified",
         images: ["/assets/images/network-audit.png"],

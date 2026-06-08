@@ -65,4 +65,20 @@ export const certifications = [
     certificateImage: "/assets/images/Logos/EC.png",
     certificateLink: "",
   },
+  {
+    logo: "/assets/images/Logos/BDNOG.png",
+    name: "IPv6 & Routing Best Practices",
+    issuer: "BDNOG",
+    issued: "May 2026",
+    expires: "Lifetime",
+    // credentialId: "239074",
+    accent: "red",
+    skills: [
+    //   "Packet Analysis",
+    //   "Network Troubleshooting",
+    //   "Traffic Inspection",
+    ],
+    certificateImage: "/assets/images/Logos/IPv6.png",
+    certificateLink: "",
+  },
 ];
