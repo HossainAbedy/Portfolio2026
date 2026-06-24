@@ -1,4 +1,5 @@
 import {
+  ShieldCheck, 
   Network,
   BarChart3,
   Video,
@@ -8,6 +9,93 @@ import {
 } from "lucide-react";
 
 export const projects = [
+    {
+        title: "Bank Infrastructure Design Playbook",
+        subtitle: "Secure, Resilient & Compliant Reference Architecture",
+        desc: "An 11-zone reference architecture for a modern banking environment, covering perimeter to physical security, SWIFT isolation, 200-branch networking, and dual-site DR — aligned to ISO 27001, NIST CSF 2.0, Bangladesh Bank ICT, and SWIFT CSP.",
+        objective:
+            "Design a zone-based, identity-driven, compliance-aligned banking infrastructure that eliminates flat network paths, isolates critical systems like SWIFT and CBS, and provides a realistic 3-phase implementation roadmap from baseline controls to SOAR and ZTNA maturity.",
+        type: "Architecture Design",
+        risk: "High",
+        coverage: "Enterprise Banking",
+        status: "Operational",
+        tags: ["FortiGate", "F5 BIG-IP", "Wazuh", "HIVE", "VMware", "ISO 27001", "NIST CSF", "SWIFT CSP"],
+        accent: "teal",
+        icon: ShieldCheck, 
+        images: ["/assets/images/Case Studies/Cyber Architecture/Cyber Architecture.png",],
+        summary:
+            "A full reference architecture for a secure, resilient banking environment. Defines 11 security zones, maps a 15+ tool security stack, documents traffic flows, and aligns every control to ISO 27001, NIST CSF 2.0, Bangladesh Bank ICT guidelines, and SWIFT CSP.",
+        pipeline: [
+            {
+                title: "Zone segmentation design",
+                desc: "Defined 11 logical zones — Internet Edge, Perimeter, DMZ, Application, Database, SWIFT, Security Ops, HQ Users, Branch Network, Physical Security, and Voice — with default-deny routing between all zones.",
+            },
+            {
+                title: "Security stack mapping",
+                desc: "Mapped FortiGate 1100E HA, F5 BIG-IP WAF, FortiMail 400F, Wazuh SIEM, FortiAnalyzer, Elasticsearch, HIVE IR, and Kaspersky into a coordinated detection-and-response stack.",
+            },
+            {
+                title: "Compliance alignment",
+                desc: "Documented how each zone and control satisfies ISO 27001 Annex A, NIST CSF 2.0 functions, Bangladesh Bank ICT requirements, and SWIFT CSP mandatory controls.",
+            },
+            {
+                title: "Branch & DR architecture",
+                desc: "Designed 200-branch network using FortiGate 600E with IPSec/MPLS tunnels, no branch-to-branch routing, and a warm-standby DR site with VMware replication and RPO < 15 minutes.",
+            },
+            {
+                title: "Roadmap & playbook",
+                desc: "Produced a 3-phase implementation roadmap — from core segmentation and logging (Phase 1) through PAM and MFA hardening (Phase 2) to SOAR, ZTNA, and DLP maturity (Phase 3).",
+            },
+        ],
+        highlights: [
+            "11-zone segmented architecture with no flat network paths between any zones",
+            "SWIFT zone fully isolated with dedicated firewall and two-person operator control",
+            "Dual-site DR design with VMware replication — RPO < 15 min, RTO < 1 hour",
+            "Aligned to ISO 27001, NIST CSF 2.0, Bangladesh Bank ICT, and SWIFT CSP",
+            "200-branch IPSec/MPLS network with centralised policy enforcement",
+            "3-phase implementation roadmap from baseline controls to SOAR and ZTNA maturity",
+        ],
+        visualization: [
+            "Full zone architecture diagram (11 zones)",
+            "Traffic flow matrix across zones",
+            "Compliance control mapping table",
+            "3-phase implementation roadmap",
+            "Branch network topology",
+            "DR and HA architecture layout",
+        ],
+        auditUse: [
+            "Demonstrates architecture design and strategic security planning capability",
+            "Supports ISO 27001 and NIST CSF control mapping conversations with auditors",
+            "Shows SWIFT CSP isolation design for banking compliance reviews",
+            "Useful as a reference for DR and business continuity documentation",
+        ],
+        stack: [
+            "FortiGate 1100E",
+            "F5 BIG-IP WAF",
+            "FortiMail 400F",
+            "Wazuh SIEM",
+            "FortiAnalyzer 400E",
+            "Elasticsearch",
+            "HIVE IR",
+            "Kaspersky",
+            "VMware vSphere",
+            "ZKTeco",
+            "Hikvision",
+            "Active Directory",
+            "IPSec/MPLS",
+        ],
+        impact: [
+            "Zero flat network paths — every zone is isolated and default-deny",
+            "SWIFT environment fully air-gapped from user and management zones",
+            "200-branch rollout designed with centralised policy and local resilience",
+            "Full compliance coverage across four regulatory frameworks",
+        ],
+        relatedProjects: [
+            "This architecture directly informs the monitoring design used in the FortiAnalyzer Monitoring & Log Correlation case study.",
+            "The branch network zone (Z9) aligns with the endpoint hardening and inventory work in the PC Inventory & Risk Analysis Platform.",
+        ],
+    },
+
     {
         title: "PC Inventory & Risk Analysis Platform",
         subtitle: "Asset Discovery, Endpoint Inspection, and Audit Reporting",

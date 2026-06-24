@@ -1,5 +1,115 @@
 export const caseStudies = [
     {
+        title: "Secure Bank Infrastructure Architecture Design",
+        tag: "ARCHITECTURE",
+        accent: "sky",
+        metricLabel: "DESIGN COVERAGE",
+        metric: "11 Zones · 4 Frameworks",
+        images: [
+            "/assets/images/Case Studies/Cyber Architecture/Cyber Architecture.png",
+        ],
+        desc: "Designed a full zone-based banking infrastructure aligned to ISO 27001, NIST CSF 2.0, Bangladesh Bank ICT guidelines, and SWIFT CSP — covering perimeter, DMZ, application, database, SWIFT isolation, 200-branch networking, physical security, and dual-site DR.",
+        summary:
+            "This case study documents the design of a secure, resilient, and compliance-aligned banking infrastructure. Starting from a blank canvas, the goal was to eliminate flat networks, isolate critical systems, define a realistic security stack, and produce an actionable implementation roadmap across three maturity phases.",
+        context:
+            "Modern banking environments face pressure from multiple directions — regulatory mandates (ISO 27001, NIST CSF, Bangladesh Bank ICT, SWIFT CSP), operational scale (hundreds of branches, thousands of endpoints), and advanced threats. A flat or poorly segmented network makes all of these harder to manage. This design addresses that gap with a structured, zone-first approach.",
+        objective:
+            "Design a zone-based, identity-driven banking infrastructure with no flat network paths — isolating internet, DMZ, application, database, SWIFT, management, user, branch, physical security, voice, and data center zones — and align every control to applicable regulatory frameworks.",
+        methodology: [
+            "Zone segmentation using default-deny routing between all 11 zones",
+            "Security stack selection across perimeter, detection, endpoint, identity, and response layers",
+            "Compliance mapping to ISO 27001 Annex A, NIST CSF 2.0, Bangladesh Bank ICT, and SWIFT CSP",
+            "Branch architecture design for 200 sites using IPSec/MPLS and centralized policy",
+            "DR and HA design targeting RPO < 15 minutes and RTO < 1 hour",
+            "Phased roadmap from core controls to SOAR, ZTNA, and DLP maturity",
+        ],
+        pipeline: [
+            {
+                title: "Zone architecture design",
+                desc: "Defined 11 zones — Internet Edge (Z1), Perimeter (Z2), DMZ (Z3), Application (Z4), Database (Z5), SWIFT (Z6), Security Ops (Z7), HQ Users (Z8), Branch Network (Z9), Physical Security (Z10), Voice (Z11) — with explicit trust boundaries and traffic flows.",
+            },
+            {
+                title: "SWIFT isolation design",
+                desc: "Isolated the SWIFT Alliance Access and gateway behind a dedicated firewall with no email or internet access, two-person operator control, and dedicated audit logging — aligned to SWIFT CSP mandatory controls.",
+            },
+            {
+                title: "Security stack integration",
+                desc: "Mapped FortiGate 1100E HA, F5 BIG-IP, FortiMail 400F, Wazuh, FortiAnalyzer, Elasticsearch, HIVE, and Kaspersky into a coordinated stack with centralised log collection, alerting, and incident response workflows.",
+            },
+            {
+                title: "Branch network blueprint",
+                desc: "Designed 200-branch network with FortiGate 600E appliances, IPSec/MPLS tunnels, no branch-to-branch routing, separate VLANs for users, voice, cameras, and devices, and centralized policy enforcement.",
+            },
+            {
+                title: "Compliance alignment",
+                desc: "Mapped each zone and control to ISO 27001 Annex A controls, NIST CSF 2.0 Identify/Protect/Detect/Respond/Recover functions, Bangladesh Bank ICT security guidelines, and SWIFT CSP requirements.",
+            },
+            {
+                title: "Implementation roadmap",
+                desc: "Produced a 3-phase roadmap: Phase 1 — segmentation, logging, SWIFT separation; Phase 2 — PAM, MFA everywhere, NAC, Sysmon; Phase 3 — SOAR, threat intel, DLP, deception, ZTNA.",
+            },
+        ],
+        evidence: [
+            "Full zone architecture diagram with 11 zones and traffic flow lines",
+            "Compliance mapping table across four frameworks",
+            "Branch security blueprint per site",
+            "3-phase implementation roadmap with outcomes per phase",
+            "Security control stack documentation by layer",
+            "DR/HA architecture with RPO and RTO targets",
+        ],
+        visualization: [
+            "11-zone network architecture diagram",
+            "Traffic flow matrix (source → path → security requirement)",
+            "Compliance framework control mapping",
+            "Branch topology with VLAN segmentation",
+            "3-phase implementation timeline",
+            "Security control stack by layer",
+        ],
+        outcomes: [
+            "Zero flat network paths — every zone isolated with default-deny routing",
+            "SWIFT environment fully separated from user and management zones",
+            "200-branch architecture designed with local resilience and centralised control",
+            "Full compliance coverage documented across ISO 27001, NIST CSF, Bangladesh Bank ICT, and SWIFT CSP",
+            "Actionable 3-phase roadmap from baseline to SOAR and ZTNA maturity",
+            "DR architecture targeting RPO < 15 minutes and RTO < 1 hour",
+        ],
+        metrics: [
+            "11 security zones designed with explicit trust boundaries",
+            "200 branches covered under a unified branch security blueprint",
+            "4 compliance frameworks mapped with per-control evidence",
+            "3-phase implementation roadmap produced",
+            "15+ tools integrated into a coordinated security stack",
+        ],
+        scope: "Enterprise Banking Infrastructure",
+        focus: "Architecture Design & Compliance Alignment",
+        status: "Completed",
+        bullets: [
+            "11-zone segmented architecture — Internet, DMZ, App, DB, SWIFT, Ops, Users, Branches, Physical, Voice, DR",
+            "SWIFT zone fully isolated with dedicated firewall and two-person operator control",
+            "Aligned to ISO 27001, NIST CSF 2.0, Bangladesh Bank ICT, and SWIFT CSP",
+            "200-branch IPSec/MPLS network with no branch-to-branch routing",
+            "Dual-site DR design — RPO < 15 min, RTO < 1 hour",
+            "3-phase implementation roadmap from core controls to SOAR and ZTNA",
+        ],
+        tags: [
+            "Architecture",
+            "ISO 27001",
+            "NIST CSF",
+            "SWIFT CSP",
+            "FortiGate",
+            "Zero Trust",
+            "DR/HA",
+            "Compliance",
+        ],
+        relatedProjects: [
+            "FortiAnalyzer Monitoring & Log Correlation",
+            "FortiGate Policy, Interface & Traffic Review",
+            "Wazuh SIEM Tuning & CIS Benchmark Hardening",
+            "Bank Infrastructure Design Playbook (Project)",
+        ],
+    },
+
+    {
         title: "Network Device Vulnerability Assessment",
         tag: "PENTEST",
         accent: "red",

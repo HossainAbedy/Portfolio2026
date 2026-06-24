@@ -75,12 +75,14 @@ export default function Hero({ site }) {
             <TagChip tone="violet">FortiGate</TagChip>
             <TagChip tone="green">FortiAnalyzer</TagChip>
             <TagChip tone="amber">Active Directory</TagChip>
-            <TagChip tone="red">GPO Hardening</TagChip>
+            <TagChip tone="indigo">SWIFT CSP</TagChip>
             <TagChip tone="blue">PowerShell Automation</TagChip>
             <TagChip tone="slate">Fullstack Development</TagChip>
+            <TagChip tone="teal">ISO 27001</TagChip>
+            <TagChip tone="sky">NIST CSF</TagChip>
           </div>
 
-          <div className="mb-5 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="mb-5 grid max-w-3xl grid-cols-1 gap-3 sm:grid-cols-4">
             <div className="rounded-xl border border-white/10 bg-white/5 p-3">
               <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
                 SCALE
@@ -104,6 +106,14 @@ export default function Hero({ site }) {
               <p className="mt-1 text-sm font-semibold text-white">
                 Infrastructure Automation
               </p>
+            </div>
+            <div className="rounded-xl border border-white/10 bg-white/5 p-3">
+                <p className="font-mono text-[11px] tracking-[0.2em] text-slate-500">
+                    DESIGN
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">
+                    11-Zone Architecture
+                </p>
             </div>
           </div>
 
@@ -196,12 +206,12 @@ export default function Hero({ site }) {
               </div>
 
               <div className="rounded-lg border border-white/10 bg-black/20 px-2 py-1.5">
-                <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
-                  COMPLIANCE
-                </p>
-                <p className="mt-0.5 text-[11px] font-semibold leading-none text-amber-300">
-                  GPO Baseline
-                </p>
+                  <p className="font-mono text-[9px] leading-none tracking-[0.18em] text-slate-500">
+                      COMPLIANCE
+                  </p>
+                  <p className="mt-0.5 text-[11px] font-semibold leading-none text-amber-300">
+                      ISO 27001 · NIST CSF · GPO Baseline · PCI-DSS
+                  </p>
               </div>
             </div>
 
@@ -221,6 +231,10 @@ export default function Hero({ site }) {
               <MiniTagChip tone="blue">Firewall</MiniTagChip>
               <MiniTagChip tone="teal">MITRE</MiniTagChip>
               <MiniTagChip tone="orange" pulse>Compliance</MiniTagChip>
+              {/* <MiniTagChip tone="teal">ISO 27001</MiniTagChip>
+              <MiniTagChip tone="sky">NIST CSF</MiniTagChip>
+              <MiniTagChip tone="violet" pulse>SWIFT CSP</MiniTagChip>
+              <MiniTagChip tone="indigo">Zero Trust</MiniTagChip> */}
             </div>
 
             {/* <div className="border-b border-white/10 px-4 py-3">
