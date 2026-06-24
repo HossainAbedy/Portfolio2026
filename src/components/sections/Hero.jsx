@@ -210,7 +210,7 @@ export default function Hero({ site }) {
                       COMPLIANCE
                   </p>
                   <p className="mt-0.5 text-[11px] font-semibold leading-none text-amber-300">
-                      ISO 27001 · NIST CSF · GPO Baseline · PCI-DSS
+                      ISO 27001 · PCI-DSS
                   </p>
               </div>
             </div>
