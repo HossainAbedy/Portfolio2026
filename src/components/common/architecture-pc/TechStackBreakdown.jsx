@@ -133,7 +133,11 @@ export default function TechStackBreakdown() {
             { label: "Data handling",    tech: "SheetJS (xlsx)  ·  Merge strategy engine", fill: "rgba(52,211,153,.1)", stroke: "rgba(52,211,153,.4)", w: "65%" },
             { label: "Export engine",    tech: "jsPDF  ·  LAN diagram  ·  CSV export", fill: "rgba(251,191,36,.1)", stroke: "rgba(251,191,36,.4)", w: "80%" },
           ].map(({ label, tech, fill, stroke, w }) => (
-            <div key={label} style={{ width: w }} className="rounded-lg border px-3 py-2" style={{ background: fill, borderColor: stroke, borderWidth: "0.5px", width: w }}>
+            <div
+              key={label}
+              className="rounded-lg border px-3 py-2"
+              style={{ background: fill, borderColor: stroke, borderWidth: "0.5px", width: w }}
+            >
               <p className="text-[10px] font-bold text-white/80">{label}</p>
               <p className="text-[9px] text-white/40 font-mono mt-0.5">{tech}</p>
             </div>
