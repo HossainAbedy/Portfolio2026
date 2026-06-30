@@ -2,6 +2,8 @@ import React, { useMemo, useState } from "react";
 import ModalTabs from "../ModalTabs";
 import TagChip from "../TagChip";
 import ImageCarousel from "../ImageCarousel";
+import CyberArchitecturePanel from "../architecture/CyberArchitecturePanel";
+import PCInventoryArchitecturePanel from "../architecture-pc/PCInventoryArchitecturePanel";
 
 function SectionBlock({ title, children, tone = "cyan" }) {
   if (!children) return null;
@@ -50,21 +52,58 @@ export default function ProjectDetailModal({ project }) {
       ? [project.image]
       : [];
 
-  const tabs = useMemo(() => {
-    const base = [
-      { id: "overview", label: "Overview" },
-      { id: "process", label: "Process" },
-      { id: "tech", label: "Tech" },
-      { id: "impact", label: "Impact" },
-      { id: "details", label: "Details" },
+   const tabs = useMemo(() => {
+    const tabs = [
+      {
+        id: "overview",
+        label: "Overview",
+      },
     ];
 
-    if (images.length > 0) {
-      base.splice(2, 0, { id: "screens", label: "Screens" });
+    // Architecture sits right after Overview, and is visually highlighted
+    // so first-time visitors can't miss it.
+    if (
+      project.customComponent === "CyberArchitecture" ||
+      project.customComponent === "PCInventory"
+    ) {
+      tabs.push({
+        id: "architecture",
+        label: "Architecture",
+        highlight: true,
+        badge: "EXPLORE",
+      });
     }
 
-    return base;
-  }, [images.length]);
+    tabs.push({
+      id: "process",
+      label: "Method",
+    });
+
+    if (images.length > 0) {
+      tabs.push({
+        id: "screens",
+        label: "Gallery",
+      });
+    }
+
+    tabs.push({
+      id: "tech",
+      label: "Technology",
+    });
+
+    tabs.push(
+      {
+        id: "impact",
+        label: "Impact",
+      },
+      {
+        id: "details",
+        label: "Details",
+      }
+    );
+
+    return tabs;
+  }, [images.length, project.customComponent]);
 
   const accent = project.accent || "cyan";
 
@@ -72,7 +111,7 @@ export default function ProjectDetailModal({ project }) {
     <div className="space-y-5">
       <div>
         <p className="mb-2 font-mono text-xs tracking-[0.3em] text-cyan-300/80">
-           PROJECT
+           PROJECTS
         </p>
         <h3 className="text-2xl font-bold text-white">{project.title}</h3>
         <p className="mt-1 text-sm text-slate-400">{project.subtitle}</p>
@@ -109,6 +148,13 @@ export default function ProjectDetailModal({ project }) {
             </SectionBlock>
           )}
         </div>
+      )}
+
+      {activeTab === "architecture" && project.customComponent === "CyberArchitecture" && (
+        <CyberArchitecturePanel project={project} />
+      )}
+      {activeTab === "architecture" && project.customComponent === "PCInventory" && (
+        <PCInventoryArchitecturePanel project={project} />
       )}
 
       {activeTab === "process" && (
@@ -267,6 +313,15 @@ export default function ProjectDetailModal({ project }) {
             </SectionBlock>
           )}
         </div>
+      )}
+
+      {activeTab === "metrics" && (
+          <SectionBlock
+              title="Project Metrics"
+              tone="emerald"
+          >
+              {renderList(project.metrics,"emerald")}
+          </SectionBlock>
       )}
 
       {activeTab === "details" && (

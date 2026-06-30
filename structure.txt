@@ -9,6 +9,20 @@ portfolio2026/
 │  │  │  ├─ modals
 │  │  │  │  ├─ ProjectDetailModal.jsx
 │  │  │  │  └─ CaseStudyDetailModal.jsx
+│  │  │  ├── architecture
+│  │  │  │  ├── CyberArchitecturePanel.jsx      <-- NEW
+│  │  │  │  ├── ZoneDiagram.jsx                 <-- NEW
+│  │  │  │  ├── SecurityStack.jsx               <-- NEW
+│  │  │  │  ├── ComplianceMatrix.jsx            <-- NEW
+│  │  │  │  ├── RoadmapTimeline.jsx             <-- NEW
+│  │  │  │  └── BranchTopology.jsx              <-- NEW
+│  │  │  ├─ architecture-pc/                    <-- NEW
+│  │  │  │  ├─ PCInventoryArchitecturePanel.jsx <-- NEW
+│  │  │  │  ├─ DeploymentMetrics.jsx            <-- NEW
+│  │  │  │  ├─ ScanPipeline.jsx                 <-- NEW
+│  │  │  │  ├─ RiskEngine.jsx                   <-- NEW
+│  │  │  │  ├─ TechStackBreakdown.jsx           <-- NEW
+│  │  │  │  └─ DataFlowDiagram.jsx              <-- NEW
 │  │  │  ├─ DividerLine.jsx
 │  │  │  ├─ GlassCard.jsx
 │  │  │  ├─ Metrics.jsx

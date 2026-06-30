@@ -94,6 +94,7 @@ export const projects = [
             "This architecture directly informs the monitoring design used in the FortiAnalyzer Monitoring & Log Correlation case study.",
             "The branch network zone (Z9) aligns with the endpoint hardening and inventory work in the PC Inventory & Risk Analysis Platform.",
         ],
+        customComponent: "CyberArchitecture",
     },
 
     {
@@ -238,6 +239,7 @@ export const projects = [
             "Reduced manual inventory and reporting workload",
             "Enabled migration planning, hardening review, and remediation tracking from one workflow",
         ],
+        customComponent: "PCInventory",
    },
 
    {
