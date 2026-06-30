@@ -2,8 +2,8 @@ import React, { useMemo, useState } from "react";
 import ModalTabs from "../ModalTabs";
 import TagChip from "../TagChip";
 import ImageCarousel from "../ImageCarousel";
-import CyberArchitecturePanel from "../architecture/CyberArchitecturePanel";
-import PCInventoryArchitecturePanel from "../architecture-pc/PCInventoryArchitecturePanel";
+import CyberArchitecturePanel from "./architecture/CyberArchitecturePanel";
+import PCInventoryArchitecturePanel from "./architecture-pc/PCInventoryArchitecturePanel";
 
 function SectionBlock({ title, children, tone = "cyan" }) {
   if (!children) return null;
