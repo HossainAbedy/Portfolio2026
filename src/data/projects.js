@@ -1,6 +1,7 @@
 import {
   ShieldCheck, 
   Network,
+  Shield, 
   BarChart3,
   Video,
   Code2,
@@ -243,6 +244,142 @@ export const projects = [
    },
 
    {
+        title: "SecureVault",
+        subtitle: "Local-First Encrypted Password Manager for Windows 11",
+        desc: "A full-stack personal password manager built on AES-256-GCM encryption, Windows DPAPI integration, and a Chrome/Edge/Firefox browser extension with native messaging — storing all credentials locally with zero cloud dependency.",
+        objective:
+        "Design and build a production-grade offline password manager with browser autofill, multi-browser extension support, automated credential capture, and a professional Windows installer — deployable on any Windows 11 machine with minimal setup.",
+        type: "Security Tool",
+        risk: "High",
+        coverage: "Windows 11 Desktop",
+        status: "Operational",
+        tags: ["Python", "PyQt6", "AES-256-GCM", "Chrome Extension", "DPAPI"],
+        accent: "red",
+        icon: Shield,
+        images: [
+            "/assets/images/Projects/SecureVault/SecureVault-1.png",
+            "/assets/images/Projects/SecureVault/SecureVault-2.png",
+            "/assets/images/Projects/SecureVault/SecureVault-3.png",
+            "/assets/images/Projects/SecureVault/SecureVault-4.png",
+            "/assets/images/Projects/SecureVault/SecureVault-5.png",
+            "/assets/images/Projects/SecureVault/SecureVault-6.png",
+            "/assets/images/Projects/SecureVault/SecureVault-7.png",
+            "/assets/images/Projects/SecureVault/SecureVault-8.png",
+            "/assets/images/Projects/SecureVault/SecureVault-9.png",
+            "/assets/images/Projects/SecureVault/SecureVault-10.png",
+            "/assets/images/Projects/SecureVault/SecureVault-11.png",
+        ],
+        summary:
+        "Built to securely store, autofill, import, and manage passwords entirely offline using military-grade encryption, Windows account binding, and a cross-browser extension with save/update detection.",
+        pipeline: [
+            {
+                title: "Vault creation and authentication",
+                desc: "On first launch the user registers a vault with a master password. The vault key is wrapped using Argon2id KDF and stored encrypted. Optionally the key is also wrapped with Windows DPAPI, enabling silent auto-unlock for the registered Windows account on every subsequent launch.",
+            },
+            {
+                title: "AES-256-GCM encrypted storage",
+                desc: "Every credential is individually encrypted with AES-256-GCM before being written to a local SQLite database. The vault key never touches disk in plaintext — it lives only in a zeroed Python bytearray in memory, cleared immediately on lock.",
+            },
+            {
+                title: "Browser extension autofill",
+                desc: "A Manifest V3 Chrome/Edge extension and a Manifest V2 Firefox extension communicate with the desktop app via Chrome Native Messaging. On any login page a floating button appears for one-click autofill from the local vault.",
+            },
+            {
+                title: "Credential capture and update detection",
+                desc: "The content script monitors form submissions using sessionStorage to survive page redirects. On the next page load it checks the vault — showing a Save banner for new credentials or an Update banner when a changed password is detected.",
+            },
+            {
+                title: "Browser password import",
+                desc: "A tabbed import wizard decrypts and imports saved passwords directly from Chrome, Edge, and Firefox using DPAPI key extraction and AES-GCM decryption of the browser Login Data SQLite file. Generic CSV import supports Bitwarden, KeePass, and 1Password exports.",
+            },
+            {
+                title: "Windows installer packaging",
+                desc: "PyInstaller bundles the app and native host into standalone executables. Inno Setup wraps everything into SecureVaultSetup.exe, registering native host manifests for Chrome, Edge, and Firefox, creating shortcuts, and installing the Firefox extension via enterprise policy automatically.",
+            },
+        ],
+        discovery: {
+            script: "Windows DPAPI + Argon2id authentication engine",
+            method:
+                "Detects the current Windows SID at launch, looks up the linked vault, and decrypts the vault key silently via DPAPI — no password prompt for the registered owner.",
+            outputs: [
+                "Silent auto-unlock for Windows account owner",
+                "Master password fallback for other users",
+                "Per-user isolated vault support",
+                "In-memory key with zero-on-lock protection",
+            ],
+        },
+        deepScan: {
+            script: "Browser extension native messaging pipeline",
+            columns: [
+                "PING", "GET_CREDENTIALS", "CHECK_CREDENTIAL",
+                "SAVE_CREDENTIAL", "UPDATE_CREDENTIAL", "FILL_CREDENTIALS",
+                "allowed_origins", "allowed_extensions", "sessionStorage",
+                "beforeunload", "MutationObserver", "simulateInput",
+                "WeakSet", "domain", "entry_id", "vault_key",
+            ],
+            outputs: [
+                "Real-time login form detection on any website",
+                "Autofill from local vault via native messaging",
+                "Automatic save and update prompts on form submission",
+            ],
+        },
+        riskEngine: {
+            inputs: [
+                "AES-256-GCM encryption",
+                "Argon2id key derivation",
+                "Windows DPAPI key wrapping",
+                "In-memory vault key",
+                "Zero-on-lock memory clearing",
+                "30-second clipboard auto-clear",
+                "Cryptographically secure password generator",
+                "No cloud sync or external API calls",
+            ],
+            mapping: [
+                "Vault key never written to disk in plaintext",
+                "Each entry encrypted individually with unique nonce",
+                "DPAPI binding ties vault key to Windows account",
+            ],
+            remediation: [
+                "Master password recovery path always available",
+                "Password generator with configurable strength",
+                "Clipboard cleared automatically after 30 seconds",
+                "Native host log redacts all password fields",
+            ],
+        },
+        visualization: [
+            "Category sidebar filtering",
+            "Real-time search across all fields",
+            "Detail preview panel without decryption",
+            "Password strength meter in generator",
+        ],
+        auditUse: [
+            "Fully offline — no network traffic for credential operations",
+            "SQLite database with per-field AES-256-GCM encryption",
+            "Native messaging host log with password redaction",
+            "Privacy policy published at hossainabedy.com",
+        ],
+        relatedProjects: [
+            "PC Inventory platform used similar PowerShell-based credential handling patterns.",
+            "SBAC Bank cybersecurity operations informed the threat model and encryption design.",
+        ],
+        highlights: [
+            "AES-256-GCM per-entry encryption with Argon2id key derivation (64MB, 3 passes)",
+            "Windows DPAPI auto-unlock — no password prompt for the registered Windows account",
+            "Chrome, Edge, and Firefox extension with save/update banner on form submission",
+            "Browser password import from Chrome, Edge, Firefox, and generic CSV",
+            "Professional Windows installer (Inno Setup + PyInstaller) with automated browser setup",
+        ],
+        stack: ["Python", "PyQt6", "SQLite", "AES-256-GCM", "Argon2id", "DPAPI", "Chrome Extension MV3", "Firefox MV2", "PyInstaller", "Inno Setup"],
+        impact: [
+            "Zero cloud dependency — all credentials stored and encrypted locally on-device",
+            "Single installer deploys the full stack including native host and browser extensions",
+            "Cross-browser support covering Chrome, Edge, and Firefox from one codebase",
+            "Published to Chrome Web Store with permanent extension ID tied to a signing key",
+        ],
+        customComponent: "SecureVault",
+    },
+ 
+    {
         title: "Attendance Sync Reliability Pipeline",
         subtitle: "Attendance Scheduler and Consistency Engine",
         desc: "A ZKTeco attendance collection pipeline with scheduled polling, duplicate prevention, and reliable synchronization into the HR application.",
